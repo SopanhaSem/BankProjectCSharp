@@ -60,5 +60,11 @@ namespace BankProject
             Transfer form1 = new Transfer();
             form1.Show(); this.Hide();
         }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            TranInformation form1 = new TranInformation();
+            form1.Show(); this.Hide();
+        }
     }
 }

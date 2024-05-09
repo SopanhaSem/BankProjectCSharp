@@ -49,26 +49,10 @@ namespace BankProject
         {
             try
             {
-                con.Open();
-                string sql = "SELECT tx_id, accid, date, bal, deposit, withdraw FROM transaction";
-                MySqlCommand cmd = new MySqlCommand(sql, con);
-                MySqlDataReader reader = cmd.ExecuteReader();
-
-                listView1.Items.Clear();
-
-                while (reader.Read())
-                {
-                    ListViewItem item = new ListViewItem(reader.GetInt32(0).ToString());
-                    item.SubItems.Add(reader.GetInt32(1).ToString());
-                    item.SubItems.Add(reader.GetString(2));
-                    item.SubItems.Add(reader.GetDouble(3).ToString());
-                    item.SubItems.Add(reader.GetDouble(4).ToString());
-                    item.SubItems.Add(reader.GetDouble(5).ToString());
-
-                    listView1.Items.Add(item);
-                }
-
-                reader.Close();
+                MySqlDataAdapter adapter = new MySqlDataAdapter("SELECT * FROM transaction", con);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                dataGridView1.DataSource = dt;
             }
             catch (Exception ex)
             {

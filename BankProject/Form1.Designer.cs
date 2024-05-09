@@ -70,7 +70,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(44, 306);
+            pictureBox1.Location = new Point(12, 36);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(215, 225);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -91,20 +91,18 @@
             // 
             // txtfname
             // 
-            txtfname.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtfname.Font = new Font("Times New Roman", 15.75F);
             txtfname.Location = new Point(21, 98);
-            txtfname.Multiline = true;
             txtfname.Name = "txtfname";
-            txtfname.Size = new Size(244, 33);
+            txtfname.Size = new Size(244, 32);
             txtfname.TabIndex = 3;
             // 
             // txtemail
             // 
-            txtemail.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtemail.Location = new Point(21, 575);
-            txtemail.Multiline = true;
+            txtemail.Font = new Font("Times New Roman", 15.75F);
+            txtemail.Location = new Point(292, 312);
             txtemail.Name = "txtemail";
-            txtemail.Size = new Size(244, 33);
+            txtemail.Size = new Size(244, 32);
             txtemail.TabIndex = 12;
             txtemail.TextChanged += txtbalance_TextChanged;
             txtemail.KeyPress += txtbalance_KeyPress;
@@ -113,7 +111,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(21, 551);
+            label4.Location = new Point(292, 288);
             label4.Name = "label4";
             label4.Size = new Size(51, 21);
             label4.TabIndex = 13;
@@ -123,10 +121,10 @@
             // 
             tabControl1.Controls.Add(tabPage1);
             tabControl1.Controls.Add(tabPage2);
-            tabControl1.Location = new Point(12, 12);
+            tabControl1.Location = new Point(238, 12);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(411, 701);
+            tabControl1.Size = new Size(558, 410);
             tabControl1.TabIndex = 14;
             // 
             // tabPage1
@@ -152,7 +150,7 @@
             tabPage1.Location = new Point(4, 24);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(403, 673);
+            tabPage1.Size = new Size(550, 382);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "tabPage1";
             tabPage1.UseVisualStyleBackColor = true;
@@ -182,7 +180,7 @@
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label9.Location = new Point(21, 480);
+            label9.Location = new Point(21, 288);
             label9.Name = "label9";
             label9.Size = new Size(44, 21);
             label9.TabIndex = 25;
@@ -190,25 +188,25 @@
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(21, 514);
+            dateTimePicker1.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dateTimePicker1.Location = new Point(21, 312);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(244, 23);
+            dateTimePicker1.Size = new Size(244, 32);
             dateTimePicker1.TabIndex = 24;
             // 
             // txtcity
             // 
-            txtcity.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtcity.Location = new Point(21, 300);
-            txtcity.Multiline = true;
+            txtcity.Font = new Font("Times New Roman", 15.75F);
+            txtcity.Location = new Point(292, 170);
             txtcity.Name = "txtcity";
-            txtcity.Size = new Size(244, 33);
+            txtcity.Size = new Size(244, 32);
             txtcity.TabIndex = 23;
             // 
             // label8
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label8.Location = new Point(21, 276);
+            label8.Location = new Point(292, 146);
             label8.Name = "label8";
             label8.Size = new Size(41, 21);
             label8.TabIndex = 22;
@@ -216,18 +214,17 @@
             // 
             // txtphone
             // 
-            txtphone.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtphone.Location = new Point(21, 433);
-            txtphone.Multiline = true;
+            txtphone.Font = new Font("Times New Roman", 15.75F);
+            txtphone.Location = new Point(292, 239);
             txtphone.Name = "txtphone";
-            txtphone.Size = new Size(244, 33);
+            txtphone.Size = new Size(244, 32);
             txtphone.TabIndex = 21;
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.Location = new Point(21, 409);
+            label7.Location = new Point(292, 215);
             label7.Name = "label7";
             label7.Size = new Size(57, 21);
             label7.TabIndex = 20;
@@ -235,18 +232,17 @@
             // 
             // txtstate
             // 
-            txtstate.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtstate.Location = new Point(21, 365);
-            txtstate.Multiline = true;
+            txtstate.Font = new Font("Times New Roman", 15.75F);
+            txtstate.Location = new Point(21, 239);
             txtstate.Name = "txtstate";
-            txtstate.Size = new Size(244, 33);
+            txtstate.Size = new Size(244, 32);
             txtstate.TabIndex = 19;
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(21, 341);
+            label6.Location = new Point(21, 215);
             label6.Name = "label6";
             label6.Size = new Size(47, 21);
             label6.TabIndex = 18;
@@ -254,18 +250,17 @@
             // 
             // txtstreet
             // 
-            txtstreet.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtstreet.Location = new Point(21, 233);
-            txtstreet.Multiline = true;
+            txtstreet.Font = new Font("Times New Roman", 15.75F);
+            txtstreet.Location = new Point(21, 170);
             txtstreet.Name = "txtstreet";
-            txtstreet.Size = new Size(244, 33);
+            txtstreet.Size = new Size(244, 32);
             txtstreet.TabIndex = 17;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(21, 209);
+            label5.Location = new Point(21, 146);
             label5.Name = "label5";
             label5.Size = new Size(53, 21);
             label5.TabIndex = 16;
@@ -273,18 +268,17 @@
             // 
             // txtlname
             // 
-            txtlname.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtlname.Location = new Point(21, 166);
-            txtlname.Multiline = true;
+            txtlname.Font = new Font("Times New Roman", 15.75F);
+            txtlname.Location = new Point(292, 98);
             txtlname.Name = "txtlname";
-            txtlname.Size = new Size(244, 33);
+            txtlname.Size = new Size(244, 32);
             txtlname.TabIndex = 15;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(21, 142);
+            label1.Location = new Point(292, 74);
             label1.Name = "label1";
             label1.Size = new Size(90, 21);
             label1.TabIndex = 14;
@@ -293,7 +287,6 @@
             // tabPage2
             // 
             tabPage2.Controls.Add(cbacctype);
-            tabPage2.Controls.Add(pictureBox1);
             tabPage2.Controls.Add(label13);
             tabPage2.Controls.Add(txtdes);
             tabPage2.Controls.Add(label12);
@@ -304,25 +297,26 @@
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(403, 673);
+            tabPage2.Size = new Size(550, 382);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "tabPage2";
             tabPage2.UseVisualStyleBackColor = true;
             // 
             // cbacctype
             // 
+            cbacctype.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cbacctype.FormattingEnabled = true;
             cbacctype.Items.AddRange(new object[] { "Saving Account", "Bussiness Account" });
-            cbacctype.Location = new Point(15, 105);
+            cbacctype.Location = new Point(284, 40);
             cbacctype.Name = "cbacctype";
-            cbacctype.Size = new Size(244, 23);
+            cbacctype.Size = new Size(244, 31);
             cbacctype.TabIndex = 11;
             // 
             // label13
             // 
             label13.AutoSize = true;
             label13.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label13.Location = new Point(15, 81);
+            label13.Location = new Point(284, 16);
             label13.Name = "label13";
             label13.Size = new Size(117, 21);
             label13.TabIndex = 10;
@@ -330,18 +324,17 @@
             // 
             // txtdes
             // 
-            txtdes.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtdes.Location = new Point(15, 174);
-            txtdes.Multiline = true;
+            txtdes.Font = new Font("Times New Roman", 15.75F);
+            txtdes.Location = new Point(15, 112);
             txtdes.Name = "txtdes";
-            txtdes.Size = new Size(244, 33);
+            txtdes.Size = new Size(244, 32);
             txtdes.TabIndex = 9;
             // 
             // label12
             // 
             label12.AutoSize = true;
             label12.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label12.Location = new Point(15, 150);
+            label12.Location = new Point(15, 88);
             label12.Name = "label12";
             label12.Size = new Size(96, 21);
             label12.TabIndex = 8;
@@ -349,18 +342,17 @@
             // 
             // txtbalance
             // 
-            txtbalance.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtbalance.Location = new Point(15, 242);
-            txtbalance.Multiline = true;
+            txtbalance.Font = new Font("Times New Roman", 15.75F);
+            txtbalance.Location = new Point(284, 112);
             txtbalance.Name = "txtbalance";
-            txtbalance.Size = new Size(244, 33);
+            txtbalance.Size = new Size(244, 32);
             txtbalance.TabIndex = 7;
             // 
             // label11
             // 
             label11.AutoSize = true;
             label11.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label11.Location = new Point(15, 218);
+            label11.Location = new Point(284, 88);
             label11.Name = "label11";
             label11.Size = new Size(68, 21);
             label11.TabIndex = 6;
@@ -368,11 +360,10 @@
             // 
             // txtaccno
             // 
-            txtaccno.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtaccno.Font = new Font("Times New Roman", 15.75F);
             txtaccno.Location = new Point(15, 40);
-            txtaccno.Multiline = true;
             txtaccno.Name = "txtaccno";
-            txtaccno.Size = new Size(244, 33);
+            txtaccno.Size = new Size(244, 32);
             txtaccno.TabIndex = 5;
             // 
             // label10
@@ -387,21 +378,23 @@
             // 
             // button2
             // 
-            button2.Location = new Point(478, 210);
+            button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
+            button2.BackgroundImageLayout = ImageLayout.Zoom;
+            button2.Location = new Point(40, 295);
             button2.Name = "button2";
-            button2.Size = new Size(142, 71);
+            button2.Size = new Size(142, 50);
             button2.TabIndex = 15;
-            button2.Text = "Save";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click_1;
             // 
             // button3
             // 
-            button3.Location = new Point(478, 330);
+            button3.BackgroundImage = (Image)resources.GetObject("button3.BackgroundImage");
+            button3.BackgroundImageLayout = ImageLayout.Zoom;
+            button3.Location = new Point(40, 354);
             button3.Name = "button3";
-            button3.Size = new Size(142, 72);
+            button3.Size = new Size(142, 51);
             button3.TabIndex = 16;
-            button3.Text = "Exit";
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
@@ -409,9 +402,10 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(658, 717);
+            BackColor = SystemColors.Control;
+            ClientSize = new Size(808, 455);
             Controls.Add(button3);
+            Controls.Add(pictureBox1);
             Controls.Add(button2);
             Controls.Add(tabControl1);
             Name = "Form1";
