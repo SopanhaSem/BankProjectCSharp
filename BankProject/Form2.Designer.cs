@@ -28,24 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             button5 = new Button();
             btnsave = new Button();
             btndelete = new Button();
             dataGridView1 = new DataGridView();
+            btnupdate = new Button();
+            btnedit = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Times New Roman", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(260, 28);
-            label1.Name = "label1";
-            label1.Size = new Size(305, 36);
-            label1.TabIndex = 1;
-            label1.Text = "Account Information";
-            label1.Click += label1_Click_1;
             // 
             // button5
             // 
@@ -62,26 +53,28 @@
             // 
             // btnsave
             // 
-            btnsave.BackColor = Color.FromArgb(128, 128, 255);
+            btnsave.BackColor = SystemColors.Control;
+            btnsave.BackgroundImage = (Image)resources.GetObject("btnsave.BackgroundImage");
+            btnsave.BackgroundImageLayout = ImageLayout.Zoom;
             btnsave.Font = new Font("Times New Roman", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnsave.Location = new Point(299, 486);
+            btnsave.Location = new Point(174, 433);
             btnsave.Name = "btnsave";
             btnsave.Size = new Size(109, 49);
             btnsave.TabIndex = 10;
-            btnsave.Text = "Save";
             btnsave.UseVisualStyleBackColor = false;
             btnsave.Click += btnsave_Click;
             // 
             // btndelete
             // 
-            btndelete.BackColor = Color.Red;
+            btndelete.BackColor = SystemColors.Control;
+            btndelete.BackgroundImage = (Image)resources.GetObject("btndelete.BackgroundImage");
+            btndelete.BackgroundImageLayout = ImageLayout.Zoom;
             btndelete.Font = new Font("Times New Roman", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btndelete.ForeColor = SystemColors.ActiveCaptionText;
-            btndelete.Location = new Point(473, 486);
+            btndelete.Location = new Point(644, 433);
             btndelete.Name = "btndelete";
             btndelete.Size = new Size(109, 49);
             btndelete.TabIndex = 13;
-            btndelete.Text = "Delete";
             btndelete.UseVisualStyleBackColor = false;
             btndelete.Click += btndelete_Click;
             // 
@@ -89,37 +82,65 @@
             // 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(37, 94);
+            dataGridView1.Location = new Point(98, 24);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(761, 386);
             dataGridView1.TabIndex = 14;
+            // 
+            // btnupdate
+            // 
+            btnupdate.BackColor = SystemColors.Control;
+            btnupdate.BackgroundImage = (Image)resources.GetObject("btnupdate.BackgroundImage");
+            btnupdate.BackgroundImageLayout = ImageLayout.Zoom;
+            btnupdate.Font = new Font("Times New Roman", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnupdate.ForeColor = SystemColors.ActiveCaptionText;
+            btnupdate.Location = new Point(330, 433);
+            btnupdate.Name = "btnupdate";
+            btnupdate.Size = new Size(109, 49);
+            btnupdate.TabIndex = 15;
+            btnupdate.UseVisualStyleBackColor = false;
+            btnupdate.Click += btnupdate_Click_1;
+            // 
+            // btnedit
+            // 
+            btnedit.BackColor = SystemColors.Control;
+            btnedit.BackgroundImage = (Image)resources.GetObject("btnedit.BackgroundImage");
+            btnedit.BackgroundImageLayout = ImageLayout.Zoom;
+            btnedit.Font = new Font("Times New Roman", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnedit.ForeColor = SystemColors.ActiveCaptionText;
+            btnedit.Location = new Point(485, 433);
+            btnedit.Name = "btnedit";
+            btnedit.Size = new Size(109, 49);
+            btnedit.TabIndex = 16;
+            btnedit.UseVisualStyleBackColor = false;
+            btnedit.Click += btnedit_Click;
             // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(828, 588);
+            ClientSize = new Size(889, 709);
+            Controls.Add(btnedit);
+            Controls.Add(btnupdate);
             Controls.Add(dataGridView1);
             Controls.Add(btndelete);
             Controls.Add(btnsave);
             Controls.Add(button5);
-            Controls.Add(label1);
             Name = "Form2";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form2";
             Load += Form2_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-        private Label label1;
         private Button button5;
         private Button btnsave;
-        private Button button2;
+        private Button btnedit;
         private Button button3;
         private Button btndelete;
         private DataGridView dataGridView1;
+        private Button btnupdate;
     }
 }

@@ -49,6 +49,7 @@
             btnadd = new Button();
             pictureBox6 = new PictureBox();
             pictureBox1 = new PictureBox();
+            label7 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -267,11 +268,22 @@
             pictureBox1.TabIndex = 26;
             pictureBox1.TabStop = false;
             // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Verdana", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.Location = new Point(403, 14);
+            label7.Name = "label7";
+            label7.Size = new Size(333, 38);
+            label7.TabIndex = 27;
+            label7.Text = "Staff Information";
+            // 
             // TranInformation
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1133, 663);
+            Controls.Add(label7);
             Controls.Add(pictureBox1);
             Controls.Add(pictureBox6);
             Controls.Add(btnadd);
@@ -324,5 +336,6 @@
         private Button btnadd;
         private PictureBox pictureBox6;
         private PictureBox pictureBox1;
+        private Label label7;
     }
 }

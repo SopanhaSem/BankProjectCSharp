@@ -36,9 +36,7 @@ namespace BankProject
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
-            form2.Show();
-            this.Hide();
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -65,6 +63,11 @@ namespace BankProject
         {
             TranInformation form1 = new TranInformation();
             form1.Show(); this.Hide();
+        }
+
+        private void pictureBox2_MouseHover(object sender, EventArgs e)
+        {
+          
         }
     }
 }

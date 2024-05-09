@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Transfer));
             label5 = new Label();
             dateTimePicker1 = new DateTimePicker();
             txtamount = new TextBox();
@@ -39,6 +40,8 @@
             label3 = new Label();
             button2 = new Button();
             button5 = new Button();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // label5
@@ -53,18 +56,18 @@
             // 
             // dateTimePicker1
             // 
+            dateTimePicker1.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dateTimePicker1.Location = new Point(154, 196);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(244, 23);
+            dateTimePicker1.Size = new Size(244, 32);
             dateTimePicker1.TabIndex = 54;
             // 
             // txtamount
             // 
-            txtamount.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtamount.Font = new Font("Times New Roman", 15.75F);
             txtamount.Location = new Point(417, 195);
-            txtamount.Multiline = true;
             txtamount.Name = "txtamount";
-            txtamount.Size = new Size(244, 33);
+            txtamount.Size = new Size(244, 32);
             txtamount.TabIndex = 53;
             // 
             // label6
@@ -79,11 +82,10 @@
             // 
             // txttacc
             // 
-            txttacc.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txttacc.Font = new Font("Times New Roman", 15.75F);
             txttacc.Location = new Point(417, 127);
-            txttacc.Multiline = true;
             txttacc.Name = "txttacc";
-            txttacc.Size = new Size(244, 33);
+            txttacc.Size = new Size(244, 32);
             txttacc.TabIndex = 51;
             // 
             // label1
@@ -98,11 +100,10 @@
             // 
             // txtfacc
             // 
-            txtfacc.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtfacc.Font = new Font("Times New Roman", 15.75F);
             txtfacc.Location = new Point(154, 127);
-            txtfacc.Multiline = true;
             txtfacc.Name = "txtfacc";
-            txtfacc.Size = new Size(244, 33);
+            txtfacc.Size = new Size(244, 32);
             txtfacc.TabIndex = 49;
             // 
             // label2
@@ -118,22 +119,23 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Times New Roman", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Font = new Font("Verdana", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.Location = new Point(330, 22);
             label3.Name = "label3";
-            label3.Size = new Size(122, 36);
+            label3.Size = new Size(150, 38);
             label3.TabIndex = 56;
             label3.Text = "Tranfer";
             // 
             // button2
             // 
-            button2.BackColor = Color.White;
+            button2.BackColor = SystemColors.Control;
+            button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
+            button2.BackgroundImageLayout = ImageLayout.Zoom;
             button2.Font = new Font("Times New Roman", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button2.Location = new Point(154, 245);
             button2.Name = "button2";
             button2.Size = new Size(136, 40);
             button2.TabIndex = 57;
-            button2.Text = "Transfer";
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
@@ -150,12 +152,24 @@
             button5.UseVisualStyleBackColor = false;
             button5.Click += button5_Click;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = SystemColors.Control;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(408, 245);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(312, 173);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 60;
+            pictureBox1.TabStop = false;
+            // 
             // Transfer
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.GradientActiveCaption;
+            BackColor = SystemColors.Control;
             ClientSize = new Size(800, 450);
+            Controls.Add(pictureBox1);
             Controls.Add(button5);
             Controls.Add(button2);
             Controls.Add(label3);
@@ -170,6 +184,7 @@
             Name = "Transfer";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Transfer";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -187,5 +202,6 @@
         private Label label3;
         private Button button2;
         private Button button5;
+        private PictureBox pictureBox1;
     }
 }
