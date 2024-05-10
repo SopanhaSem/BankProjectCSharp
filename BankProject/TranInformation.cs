@@ -39,6 +39,12 @@ namespace BankProject
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
                 dataGridView1.DataSource = dt;
+                dataGridView1.Columns["stid"].HeaderText = "ID";
+                dataGridView1.Columns["stName"].HeaderText = "Name";
+                dataGridView1.Columns["gender"].HeaderText = "Gender";
+                dataGridView1.Columns["position"].HeaderText = "Position";
+                dataGridView1.Columns["phone"].HeaderText = "Phone";
+                dataGridView1.Columns["hiredate"].HeaderText = "Hired Date";
             }
             catch (Exception ex)
             {
@@ -123,6 +129,17 @@ namespace BankProject
 
         private void btnadd_Click_1(object sender, EventArgs e)
         {
+            // Check if any of the required fields are empty
+            if (string.IsNullOrEmpty(txtstaffid.Text) ||
+                string.IsNullOrEmpty(txtstaffname.Text) ||
+                comboBox1.SelectedIndex == -1 ||
+                string.IsNullOrEmpty(txtpos.Text) ||
+                string.IsNullOrEmpty(txtphone.Text))
+            {
+                MessageBox.Show("Please fill in all required fields.");
+                return;
+            }
+
             try
             {
                 using (MySqlConnection con = new MySqlConnection("server=localhost;database=bankdb;username=root;password=;"))
@@ -147,7 +164,6 @@ namespace BankProject
                     DataTable dt = new DataTable();
                     adapter.Fill(dt);
                     dataGridView1.DataSource = dt;
-
                 }
             }
             catch (Exception ex)

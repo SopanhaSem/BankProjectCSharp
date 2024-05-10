@@ -41,6 +41,7 @@
             button2 = new Button();
             button5 = new Button();
             pictureBox1 = new PictureBox();
+            label9 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -48,7 +49,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(154, 171);
+            label5.Location = new Point(155, 224);
             label5.Name = "label5";
             label5.Size = new Size(44, 21);
             label5.TabIndex = 55;
@@ -57,7 +58,7 @@
             // dateTimePicker1
             // 
             dateTimePicker1.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dateTimePicker1.Location = new Point(154, 196);
+            dateTimePicker1.Location = new Point(155, 249);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(244, 32);
             dateTimePicker1.TabIndex = 54;
@@ -65,7 +66,7 @@
             // txtamount
             // 
             txtamount.Font = new Font("Times New Roman", 15.75F);
-            txtamount.Location = new Point(417, 195);
+            txtamount.Location = new Point(418, 248);
             txtamount.Name = "txtamount";
             txtamount.Size = new Size(244, 32);
             txtamount.TabIndex = 53;
@@ -74,7 +75,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(417, 171);
+            label6.Location = new Point(418, 224);
             label6.Name = "label6";
             label6.Size = new Size(70, 21);
             label6.TabIndex = 52;
@@ -83,7 +84,7 @@
             // txttacc
             // 
             txttacc.Font = new Font("Times New Roman", 15.75F);
-            txttacc.Location = new Point(417, 127);
+            txttacc.Location = new Point(418, 180);
             txttacc.Name = "txttacc";
             txttacc.Size = new Size(244, 32);
             txttacc.TabIndex = 51;
@@ -92,7 +93,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(417, 103);
+            label1.Location = new Point(418, 156);
             label1.Name = "label1";
             label1.Size = new Size(99, 21);
             label1.TabIndex = 50;
@@ -101,7 +102,7 @@
             // txtfacc
             // 
             txtfacc.Font = new Font("Times New Roman", 15.75F);
-            txtfacc.Location = new Point(154, 127);
+            txtfacc.Location = new Point(155, 180);
             txtfacc.Name = "txtfacc";
             txtfacc.Size = new Size(244, 32);
             txtfacc.TabIndex = 49;
@@ -110,7 +111,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(154, 103);
+            label2.Location = new Point(155, 156);
             label2.Name = "label2";
             label2.Size = new Size(119, 21);
             label2.TabIndex = 48;
@@ -120,7 +121,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Verdana", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(330, 22);
+            label3.Location = new Point(331, 75);
             label3.Name = "label3";
             label3.Size = new Size(150, 38);
             label3.TabIndex = 56;
@@ -132,7 +133,7 @@
             button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
             button2.BackgroundImageLayout = ImageLayout.Zoom;
             button2.Font = new Font("Times New Roman", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.Location = new Point(154, 245);
+            button2.Location = new Point(155, 298);
             button2.Name = "button2";
             button2.Size = new Size(136, 40);
             button2.TabIndex = 57;
@@ -156,19 +157,30 @@
             // 
             pictureBox1.BackColor = SystemColors.Control;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(408, 245);
+            pictureBox1.Location = new Point(409, 298);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(312, 173);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 60;
             pictureBox1.TabStop = false;
             // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label9.Location = new Point(186, 341);
+            label9.Name = "label9";
+            label9.Size = new Size(78, 23);
+            label9.TabIndex = 62;
+            label9.Text = "Transfer";
+            // 
             // Transfer
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 588);
+            Controls.Add(label9);
             Controls.Add(pictureBox1);
             Controls.Add(button5);
             Controls.Add(button2);
@@ -203,5 +215,6 @@
         private Button button2;
         private Button button5;
         private PictureBox pictureBox1;
+        private Label label9;
     }
 }

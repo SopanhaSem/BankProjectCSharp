@@ -50,6 +50,10 @@
             pictureBox6 = new PictureBox();
             pictureBox1 = new PictureBox();
             label7 = new Label();
+            label8 = new Label();
+            label9 = new Label();
+            label10 = new Label();
+            label11 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -87,9 +91,10 @@
             btndel.BackgroundImage = (Image)resources.GetObject("btndel.BackgroundImage");
             btndel.BackgroundImageLayout = ImageLayout.Zoom;
             btndel.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btndel.ImageAlign = ContentAlignment.MiddleLeft;
             btndel.Location = new Point(500, 564);
             btndel.Name = "btndel";
-            btndel.Size = new Size(108, 42);
+            btndel.Size = new Size(101, 42);
             btndel.TabIndex = 3;
             btndel.UseVisualStyleBackColor = false;
             btndel.Click += btndel_Click;
@@ -186,11 +191,13 @@
             // 
             // dataGridView1
             // 
-            dataGridView1.AllowUserToOrderColumns = true;
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(12, 270);
             dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.Size = new Size(691, 286);
             dataGridView1.TabIndex = 19;
@@ -278,11 +285,55 @@
             label7.TabIndex = 27;
             label7.Text = "Staff Information";
             // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label8.Location = new Point(134, 609);
+            label8.Name = "label8";
+            label8.Size = new Size(49, 23);
+            label8.TabIndex = 28;
+            label8.Text = "Save";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label9.Location = new Point(264, 608);
+            label9.Name = "label9";
+            label9.Size = new Size(69, 23);
+            label9.TabIndex = 29;
+            label9.Text = "Update";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label10.Location = new Point(403, 609);
+            label10.Name = "label10";
+            label10.Size = new Size(45, 23);
+            label10.TabIndex = 30;
+            label10.Text = "Edit";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label11.Location = new Point(512, 609);
+            label11.Name = "label11";
+            label11.Size = new Size(79, 23);
+            label11.TabIndex = 31;
+            label11.Text = "Remove";
+            // 
             // TranInformation
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1133, 663);
+            Controls.Add(label11);
+            Controls.Add(label10);
+            Controls.Add(label9);
+            Controls.Add(label8);
             Controls.Add(label7);
             Controls.Add(pictureBox1);
             Controls.Add(pictureBox6);
@@ -337,5 +388,9 @@
         private PictureBox pictureBox6;
         private PictureBox pictureBox1;
         private Label label7;
+        private Label label8;
+        private Label label9;
+        private Label label10;
+        private Label label11;
     }
 }
