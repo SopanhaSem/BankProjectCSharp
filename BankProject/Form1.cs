@@ -16,39 +16,39 @@ namespace BankProject
         }
         MySqlConnection con = new MySqlConnection("server = localhost; database = bankdb; username = root;password = ;");
 
-        public void cusId()
-        {
-            try
-            {
-                con.Open();
+        //public void cusId()
+        //{
+        //    try
+        //    {
+        //        con.Open();
 
-                string query = "select max(cusID) from customer";
+        //        string query = "select max(cusID) from customer";
 
-                MySqlCommand cmd = new MySqlCommand(query, con);
+        //        MySqlCommand cmd = new MySqlCommand(query, con);
 
-                object result = cmd.ExecuteScalar();
+        //        object result = cmd.ExecuteScalar();
 
 
-                if (result != null && result != DBNull.Value)
-                {
-                    int maxCusID = Convert.ToInt32(result);
-                    label14.Text = (maxCusID + 1).ToString();
-                }
-                else
-                {
-                    label14.Text = "1000";
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-            finally
-            {
-                if (con.State == ConnectionState.Open)
-                    con.Close();
-            }
-        }
+        //        if (result != null && result != DBNull.Value)
+        //        {
+        //            int maxCusID = Convert.ToInt32(result);
+        //            label14.Text = (maxCusID + 1).ToString();
+        //        }
+        //        else
+        //        {
+        //            label14.Text = "1000";
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show("Error: " + ex.Message);
+        //    }
+        //    finally
+        //    {
+        //        if (con.State == ConnectionState.Open)
+        //            con.Close();
+        //    }
+        //}
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -76,7 +76,7 @@ namespace BankProject
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            cusId();
+            //cusId();
         }
 
         private void button2_Click(object sender, EventArgs e)

@@ -104,6 +104,7 @@ namespace BankProject
                         DataTable dt = new DataTable();
                         adapter.Fill(dt);
                         dataGridView1.DataSource = dt;
+                        ClearTextBoxes();
                     }
                 }
                 catch (Exception ex)
@@ -130,7 +131,7 @@ namespace BankProject
         private void btnadd_Click_1(object sender, EventArgs e)
         {
             // Check if any of the required fields are empty
-            if (string.IsNullOrEmpty(txtstaffid.Text) ||
+            if (
                 string.IsNullOrEmpty(txtstaffname.Text) ||
                 comboBox1.SelectedIndex == -1 ||
                 string.IsNullOrEmpty(txtpos.Text) ||
