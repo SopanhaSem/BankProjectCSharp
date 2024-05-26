@@ -41,15 +41,16 @@
             button2 = new Button();
             button5 = new Button();
             pictureBox1 = new PictureBox();
-            label9 = new Label();
+            panel1 = new Panel();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Kh Battambang", 14.25F);
-            label5.Location = new Point(210, 362);
+            label5.Location = new Point(210, 321);
             label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
             label5.Size = new Size(52, 34);
@@ -58,11 +59,11 @@
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dateTimePicker1.Location = new Point(210, 359);
+            dateTimePicker1.Font = new Font("Kh Battambang", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dateTimePicker1.Location = new Point(210, 357);
             dateTimePicker1.Margin = new Padding(4, 7, 4, 7);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(347, 32);
+            dateTimePicker1.Size = new Size(347, 45);
             dateTimePicker1.TabIndex = 54;
             // 
             // txtamount
@@ -129,7 +130,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Kh Battambang", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(500, 101);
+            label3.Location = new Point(33, 24);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
             label3.Size = new Size(132, 58);
@@ -138,15 +139,18 @@
             // 
             // button2
             // 
-            button2.BackColor = SystemColors.Control;
+            button2.BackColor = Color.FromArgb(128, 128, 255);
             button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
-            button2.BackgroundImageLayout = ImageLayout.Zoom;
+            button2.BackgroundImageLayout = ImageLayout.None;
             button2.Font = new Font("Times New Roman", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.Location = new Point(223, 420);
+            button2.ImageAlign = ContentAlignment.MiddleLeft;
+            button2.Location = new Point(210, 408);
             button2.Margin = new Padding(4, 7, 4, 7);
             button2.Name = "button2";
-            button2.Size = new Size(168, 49);
+            button2.Size = new Size(176, 61);
             button2.TabIndex = 57;
+            button2.Text = "Transfer";
+            button2.TextAlign = ContentAlignment.MiddleRight;
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
@@ -154,13 +158,15 @@
             // 
             button5.BackColor = Color.AliceBlue;
             button5.Font = new Font("Times New Roman", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button5.Image = Properties.Resources.close2;
             button5.ImageAlign = ContentAlignment.MiddleLeft;
-            button5.Location = new Point(33, 48);
+            button5.Location = new Point(13, 16);
             button5.Margin = new Padding(4, 7, 4, 7);
             button5.Name = "button5";
-            button5.Size = new Size(114, 46);
+            button5.Size = new Size(134, 60);
             button5.TabIndex = 59;
-            button5.Text = "←";
+            button5.Text = "Close";
+            button5.TextAlign = ContentAlignment.MiddleRight;
             button5.UseVisualStyleBackColor = false;
             button5.Click += button5_Click;
             // 
@@ -177,16 +183,14 @@
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
             // 
-            // label9
+            // panel1
             // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label9.Location = new Point(269, 476);
-            label9.Margin = new Padding(4, 0, 4, 0);
-            label9.Name = "label9";
-            label9.Size = new Size(78, 23);
-            label9.TabIndex = 62;
-            label9.Text = "Transfer";
+            panel1.BackColor = Color.FromArgb(128, 128, 255);
+            panel1.Controls.Add(label3);
+            panel1.Location = new Point(465, 85);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(200, 103);
+            panel1.TabIndex = 63;
             // 
             // Transfer
             // 
@@ -194,11 +198,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
             ClientSize = new Size(1143, 897);
-            Controls.Add(label9);
+            Controls.Add(panel1);
             Controls.Add(pictureBox1);
             Controls.Add(button5);
             Controls.Add(button2);
-            Controls.Add(label3);
             Controls.Add(label5);
             Controls.Add(dateTimePicker1);
             Controls.Add(txtamount);
@@ -208,11 +211,14 @@
             Controls.Add(txtfacc);
             Controls.Add(label2);
             Font = new Font("Kh Battambang", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4, 7, 4, 7);
             Name = "Transfer";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Transfer";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -231,6 +237,6 @@
         private Button button2;
         private Button button5;
         private PictureBox pictureBox1;
-        private Label label9;
+        private Panel panel1;
     }
 }

@@ -32,6 +32,7 @@ namespace BankProject
             Form3 form3 = new Form3();
             form3.Show();
             this.Hide();
+            this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)

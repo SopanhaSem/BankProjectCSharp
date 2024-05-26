@@ -42,9 +42,9 @@
             label6 = new Label();
             btnsearch = new Button();
             pictureBox1 = new PictureBox();
-            label9 = new Label();
-            label8 = new Label();
+            panel1 = new Panel();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // txtusername
@@ -60,7 +60,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Kh Battambang", 14.25F);
-            label2.Location = new Point(167, 200);
+            label2.Location = new Point(171, 200);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
             label2.Size = new Size(154, 34);
@@ -91,7 +91,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Kh Battambang", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(431, 107);
+            label3.Location = new Point(19, 22);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
             label3.Size = new Size(167, 58);
@@ -102,27 +102,32 @@
             // 
             button5.BackColor = Color.AliceBlue;
             button5.Font = new Font("Times New Roman", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button5.Image = Properties.Resources.close1;
             button5.ImageAlign = ContentAlignment.MiddleLeft;
             button5.Location = new Point(17, 27);
             button5.Margin = new Padding(4, 7, 4, 7);
             button5.Name = "button5";
-            button5.Size = new Size(114, 56);
+            button5.Size = new Size(136, 56);
             button5.TabIndex = 12;
-            button5.Text = "←";
+            button5.Text = "Close";
+            button5.TextAlign = ContentAlignment.MiddleRight;
             button5.UseVisualStyleBackColor = false;
             button5.Click += button5_Click;
             // 
             // button1
             // 
-            button1.BackColor = SystemColors.Control;
+            button1.BackColor = Color.FromArgb(128, 128, 255);
             button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
-            button1.BackgroundImageLayout = ImageLayout.Zoom;
+            button1.BackgroundImageLayout = ImageLayout.None;
             button1.Font = new Font("Times New Roman", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(351, 436);
+            button1.ImageAlign = ContentAlignment.MiddleLeft;
+            button1.Location = new Point(316, 436);
             button1.Margin = new Padding(4, 7, 4, 7);
             button1.Name = "button1";
-            button1.Size = new Size(125, 52);
+            button1.Size = new Size(198, 62);
             button1.TabIndex = 25;
+            button1.Text = "Withdraw";
+            button1.TextAlign = ContentAlignment.MiddleRight;
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click_1;
             // 
@@ -130,7 +135,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Kh Battambang", 14.25F);
-            label5.Location = new Point(167, 325);
+            label5.Location = new Point(167, 327);
             label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
             label5.Size = new Size(52, 34);
@@ -140,11 +145,11 @@
             // dateTimePicker1
             // 
             dateTimePicker1.CalendarFont = new Font("Kh Battambang", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dateTimePicker1.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dateTimePicker1.Location = new Point(167, 360);
+            dateTimePicker1.Font = new Font("Kh Battambang", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dateTimePicker1.Location = new Point(167, 358);
             dateTimePicker1.Margin = new Padding(4, 7, 4, 7);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(347, 32);
+            dateTimePicker1.Size = new Size(347, 43);
             dateTimePicker1.TabIndex = 46;
             // 
             // txtwithdraw
@@ -160,7 +165,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Kh Battambang", 14.25F);
-            label6.Location = new Point(543, 324);
+            label6.Location = new Point(532, 327);
             label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
             label6.Size = new Size(93, 34);
@@ -171,13 +176,15 @@
             // 
             btnsearch.BackColor = SystemColors.Control;
             btnsearch.BackgroundImage = (Image)resources.GetObject("btnsearch.BackgroundImage");
-            btnsearch.BackgroundImageLayout = ImageLayout.Zoom;
+            btnsearch.BackgroundImageLayout = ImageLayout.None;
             btnsearch.Font = new Font("Times New Roman", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnsearch.Location = new Point(178, 436);
+            btnsearch.Location = new Point(167, 436);
             btnsearch.Margin = new Padding(4, 7, 4, 7);
             btnsearch.Name = "btnsearch";
-            btnsearch.Size = new Size(125, 52);
+            btnsearch.Size = new Size(141, 62);
             btnsearch.TabIndex = 48;
+            btnsearch.Text = "Search";
+            btnsearch.TextAlign = ContentAlignment.MiddleRight;
             btnsearch.UseVisualStyleBackColor = false;
             btnsearch.Click += btnsearch_Click;
             // 
@@ -193,27 +200,14 @@
             pictureBox1.TabIndex = 49;
             pictureBox1.TabStop = false;
             // 
-            // label9
+            // panel1
             // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label9.Location = new Point(367, 494);
-            label9.Margin = new Padding(4, 0, 4, 0);
-            label9.Name = "label9";
-            label9.Size = new Size(91, 23);
-            label9.TabIndex = 51;
-            label9.Text = "Withdraw";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label8.Location = new Point(211, 494);
-            label8.Margin = new Padding(4, 0, 4, 0);
-            label8.Name = "label8";
-            label8.Size = new Size(65, 23);
-            label8.TabIndex = 50;
-            label8.Text = "Search";
+            panel1.BackColor = Color.FromArgb(128, 128, 255);
+            panel1.Controls.Add(label3);
+            panel1.Location = new Point(413, 86);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(200, 103);
+            panel1.TabIndex = 50;
             // 
             // Form4
             // 
@@ -221,8 +215,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
             ClientSize = new Size(1056, 856);
-            Controls.Add(label9);
-            Controls.Add(label8);
+            Controls.Add(panel1);
             Controls.Add(pictureBox1);
             Controls.Add(btnsearch);
             Controls.Add(label5);
@@ -231,18 +224,20 @@
             Controls.Add(label6);
             Controls.Add(button1);
             Controls.Add(button5);
-            Controls.Add(label3);
             Controls.Add(txtbalance);
             Controls.Add(label1);
             Controls.Add(txtusername);
             Controls.Add(label2);
             Font = new Font("Kh Battambang", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4, 7, 4, 7);
             Name = "Form4";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form4";
             Load += Form4_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -261,7 +256,6 @@
         private Label label6;
         private Button btnsearch;
         private PictureBox pictureBox1;
-        private Label label9;
-        private Label label8;
+        private Panel panel1;
     }
 }

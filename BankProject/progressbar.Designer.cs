@@ -1,6 +1,6 @@
 ﻿namespace BankProject
 {
-    partial class progressbar
+    partial class ProgressBar
     {
         /// <summary>
         /// Required designer variable.
@@ -29,55 +29,54 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            progressBar1 = new ProgressBar();
-            label1 = new Label();
+            progressBar1 = new System.Windows.Forms.ProgressBar();
             timer1 = new System.Windows.Forms.Timer(components);
+            label1 = new Label();
             SuspendLayout();
             // 
             // progressBar1
             // 
-            progressBar1.Location = new Point(56, 162);
+            progressBar1.Location = new Point(40, 177);
             progressBar1.Name = "progressBar1";
-            progressBar1.Size = new Size(380, 34);
+            progressBar1.Size = new Size(501, 66);
             progressBar1.TabIndex = 0;
-            progressBar1.Click += progressBar1_Click;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Tw Cen MT Condensed", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.Gray;
-            label1.Location = new Point(187, 199);
-            label1.Name = "label1";
-            label1.Size = new Size(120, 44);
-            label1.TabIndex = 12;
-            label1.Text = "Loading";
             // 
             // timer1
             // 
             timer1.Enabled = true;
-            timer1.Interval = 25;
+            timer1.Interval = 20;
             timer1.Tick += timer1_Tick;
             // 
-            // progressbar
+            // label1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            label1.AutoSize = true;
+            label1.Location = new Point(172, 246);
+            label1.Name = "label1";
+            label1.Size = new Size(216, 38);
+            label1.TabIndex = 1;
+            label1.Text = "Loading Please Wait..";
+            // 
+            // ProgressBar
+            // 
+            AutoScaleDimensions = new SizeF(12F, 38F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(501, 395);
+            ClientSize = new Size(580, 455);
             Controls.Add(label1);
             Controls.Add(progressBar1);
-            Name = "progressbar";
+            Font = new Font("Kh Battambang", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(5, 8, 5, 8);
+            Name = "ProgressBar";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "progressbar";
-            Load += progressbar_Load;
+            Text = "ProgressBar";
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private ProgressBar progressBar1;
-        private Label label1;
+        private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Timer timer1;
+        private Label label1;
     }
 }

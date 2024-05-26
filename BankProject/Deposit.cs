@@ -23,6 +23,7 @@ namespace BankProject
             Form3 form = new Form3();
             form.Show();
             this.Hide();
+            this.Close();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -112,6 +113,11 @@ namespace BankProject
         }
 
         private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }

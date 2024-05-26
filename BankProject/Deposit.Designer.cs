@@ -42,9 +42,9 @@
             label2 = new Label();
             btns = new Button();
             pictureBox1 = new PictureBox();
-            label9 = new Label();
-            label8 = new Label();
+            panel1 = new Panel();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // label5
@@ -92,13 +92,15 @@
             // 
             btnsearch.BackColor = SystemColors.Control;
             btnsearch.BackgroundImage = (Image)resources.GetObject("btnsearch.BackgroundImage");
-            btnsearch.BackgroundImageLayout = ImageLayout.Zoom;
+            btnsearch.BackgroundImageLayout = ImageLayout.None;
             btnsearch.Font = new Font("Times New Roman", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnsearch.Location = new Point(182, 390);
+            btnsearch.Location = new Point(160, 390);
             btnsearch.Margin = new Padding(4, 7, 4, 7);
             btnsearch.Name = "btnsearch";
-            btnsearch.Size = new Size(137, 54);
+            btnsearch.Size = new Size(144, 54);
             btnsearch.TabIndex = 36;
+            btnsearch.Text = "Search";
+            btnsearch.TextAlign = ContentAlignment.MiddleRight;
             btnsearch.UseVisualStyleBackColor = false;
             btnsearch.Click += btnsave_Click;
             // 
@@ -106,13 +108,15 @@
             // 
             button5.BackColor = Color.AliceBlue;
             button5.Font = new Font("Times New Roman", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button5.Image = Properties.Resources.close;
             button5.ImageAlign = ContentAlignment.MiddleLeft;
-            button5.Location = new Point(17, 27);
+            button5.Location = new Point(17, 16);
             button5.Margin = new Padding(4, 7, 4, 7);
             button5.Name = "button5";
-            button5.Size = new Size(114, 47);
+            button5.Size = new Size(140, 58);
             button5.TabIndex = 35;
-            button5.Text = "←";
+            button5.Text = "Close";
+            button5.TextAlign = ContentAlignment.MiddleRight;
             button5.UseVisualStyleBackColor = false;
             button5.Click += button5_Click;
             // 
@@ -120,12 +124,13 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Verdana", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(449, 94);
+            label3.Location = new Point(24, 31);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
             label3.Size = new Size(154, 38);
             label3.TabIndex = 34;
             label3.Text = "Deposit";
+            label3.Click += label3_Click;
             // 
             // txtamount
             // 
@@ -170,15 +175,17 @@
             // 
             // btns
             // 
-            btns.BackColor = SystemColors.Control;
+            btns.BackColor = Color.FromArgb(128, 128, 255);
             btns.BackgroundImage = (Image)resources.GetObject("btns.BackgroundImage");
-            btns.BackgroundImageLayout = ImageLayout.Zoom;
+            btns.BackgroundImageLayout = ImageLayout.None;
             btns.Font = new Font("Times New Roman", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btns.Location = new Point(355, 390);
+            btns.Location = new Point(312, 390);
             btns.Margin = new Padding(4, 7, 4, 7);
             btns.Name = "btns";
-            btns.Size = new Size(137, 54);
+            btns.Size = new Size(167, 54);
             btns.TabIndex = 44;
+            btns.Text = "Deposit";
+            btns.TextAlign = ContentAlignment.MiddleRight;
             btns.UseVisualStyleBackColor = false;
             btns.Click += btns_Click;
             // 
@@ -194,27 +201,14 @@
             pictureBox1.TabIndex = 45;
             pictureBox1.TabStop = false;
             // 
-            // label9
+            // panel1
             // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label9.Location = new Point(381, 451);
-            label9.Margin = new Padding(4, 0, 4, 0);
-            label9.Name = "label9";
-            label9.Size = new Size(75, 23);
-            label9.TabIndex = 47;
-            label9.Text = "Deposit";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label8.Location = new Point(216, 451);
-            label8.Margin = new Padding(4, 0, 4, 0);
-            label8.Name = "label8";
-            label8.Size = new Size(65, 23);
-            label8.TabIndex = 46;
-            label8.Text = "Search";
+            panel1.BackColor = Color.FromArgb(128, 128, 255);
+            panel1.Controls.Add(label3);
+            panel1.Location = new Point(426, 54);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(200, 103);
+            panel1.TabIndex = 51;
             // 
             // Deposit
             // 
@@ -222,8 +216,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
             ClientSize = new Size(1056, 856);
-            Controls.Add(label9);
-            Controls.Add(label8);
+            Controls.Add(panel1);
             Controls.Add(pictureBox1);
             Controls.Add(btns);
             Controls.Add(label5);
@@ -232,18 +225,20 @@
             Controls.Add(label4);
             Controls.Add(btnsearch);
             Controls.Add(button5);
-            Controls.Add(label3);
             Controls.Add(txtamount);
             Controls.Add(label1);
             Controls.Add(txtaccno);
             Controls.Add(label2);
             Font = new Font("Kh Battambang", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ForeColor = SystemColors.ActiveCaptionText;
+            FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4, 7, 4, 7);
             Name = "Deposit";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Deposit";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -263,7 +258,6 @@
         private Label label2;
         private Button btns;
         private PictureBox pictureBox1;
-        private Label label9;
-        private Label label8;
+        private Panel panel1;
     }
 }

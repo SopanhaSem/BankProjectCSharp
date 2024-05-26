@@ -155,7 +155,7 @@
             tabPage1.Padding = new Padding(4, 7, 4, 7);
             tabPage1.Size = new Size(775, 425);
             tabPage1.TabIndex = 0;
-            tabPage1.Text = "tabPage1";
+            tabPage1.Text = "Customer";
             tabPage1.UseVisualStyleBackColor = true;
             // 
             // label9
@@ -171,11 +171,11 @@
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Font = new Font("Kh Battambang", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dateTimePicker1.Font = new Font("Kh Battambang", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dateTimePicker1.Location = new Point(7, 300);
             dateTimePicker1.Margin = new Padding(4, 7, 4, 7);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(347, 47);
+            dateTimePicker1.Size = new Size(347, 43);
             dateTimePicker1.TabIndex = 24;
             // 
             // txtcity
@@ -294,7 +294,7 @@
             tabPage2.Padding = new Padding(4, 7, 4, 7);
             tabPage2.Size = new Size(775, 425);
             tabPage2.TabIndex = 1;
-            tabPage2.Text = "tabPage2";
+            tabPage2.Text = "Account";
             tabPage2.UseVisualStyleBackColor = true;
             // 
             // cbacctype
@@ -382,24 +382,28 @@
             // button2
             // 
             button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
-            button2.BackgroundImageLayout = ImageLayout.Zoom;
-            button2.Location = new Point(65, 388);
+            button2.BackgroundImageLayout = ImageLayout.None;
+            button2.Location = new Point(50, 388);
             button2.Margin = new Padding(4, 7, 4, 7);
             button2.Name = "button2";
-            button2.Size = new Size(203, 47);
+            button2.Size = new Size(127, 56);
             button2.TabIndex = 15;
+            button2.Text = "Save";
+            button2.TextAlign = ContentAlignment.MiddleRight;
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click_1;
             // 
             // button3
             // 
             button3.BackgroundImage = (Image)resources.GetObject("button3.BackgroundImage");
-            button3.BackgroundImageLayout = ImageLayout.Zoom;
-            button3.Location = new Point(65, 449);
+            button3.BackgroundImageLayout = ImageLayout.None;
+            button3.Location = new Point(50, 449);
             button3.Margin = new Padding(4, 7, 4, 7);
             button3.Name = "button3";
-            button3.Size = new Size(203, 50);
+            button3.Size = new Size(127, 59);
             button3.TabIndex = 16;
+            button3.Text = "Close";
+            button3.TextAlign = ContentAlignment.MiddleRight;
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
@@ -414,6 +418,7 @@
             Controls.Add(button2);
             Controls.Add(tabControl1);
             Font = new Font("Kh Battambang", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4, 7, 4, 7);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;

@@ -76,13 +76,8 @@ namespace BankProject
             // Check if a row is selected
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                // Get the selected row
                 DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
-
-                // Get the ID of the selected row
                 string stid = selectedRow.Cells["stid"].Value.ToString();
-
-                // Update the selected row with the values from the text boxes
                 try
                 {
                     using (MySqlConnection con = new MySqlConnection("server=localhost;database=bankdb;username=root;password=;"))
@@ -130,7 +125,6 @@ namespace BankProject
 
         private void btnadd_Click_1(object sender, EventArgs e)
         {
-            // Check if any of the required fields are empty
             if (
                 string.IsNullOrEmpty(txtstaffname.Text) ||
                 comboBox1.SelectedIndex == -1 ||
@@ -140,7 +134,6 @@ namespace BankProject
                 MessageBox.Show("Please fill in all required fields.");
                 return;
             }
-
             try
             {
                 using (MySqlConnection con = new MySqlConnection("server=localhost;database=bankdb;username=root;password=;"))
@@ -172,7 +165,6 @@ namespace BankProject
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
-        // Method to clear text boxes
         void ClearTextBoxes()
         {
             txtstaffid.Clear();
@@ -185,21 +177,15 @@ namespace BankProject
 
         private void btnedit_Click(object sender, EventArgs e)
         {
-            // Check if a row is selected
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                // Get the selected row
                 DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
-
-                // Get the values from the selected row
                 string stid = selectedRow.Cells["stid"].Value.ToString();
                 string stName = selectedRow.Cells["stName"].Value.ToString();
                 string gender = selectedRow.Cells["gender"].Value.ToString();
                 string position = selectedRow.Cells["position"].Value.ToString();
                 string phone = selectedRow.Cells["phone"].Value.ToString();
                 DateTime hireDate = Convert.ToDateTime(selectedRow.Cells["hireDate"].Value);
-
-                // Populate the text boxes with the values from the selected row
                 txtstaffid.Text = stid;
                 txtstaffname.Text = stName;
                 comboBox1.Text = gender;
@@ -232,8 +218,6 @@ namespace BankProject
                             cmd.Parameters.AddWithValue("@stid", stid);
                             cmd.ExecuteNonQuery();
                             MessageBox.Show("Record deleted successfully.");
-
-                            // Refresh DataGridView with updated data from the database
                             MySqlDataAdapter adapter = new MySqlDataAdapter("SELECT * FROM staff", con);
                             DataTable dt = new DataTable();
                             adapter.Fill(dt);
