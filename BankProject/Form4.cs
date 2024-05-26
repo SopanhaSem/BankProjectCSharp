@@ -26,7 +26,12 @@ namespace BankProject
         {
 
         }
-
+        public void clear()
+        {
+            txtbalance.Text = "";
+            txtusername.Text = "";
+            txtwithdraw.Text = "";
+        }
         private void button5_Click(object sender, EventArgs e)
         {
             Form3 form3 = new Form3();
@@ -116,13 +121,14 @@ namespace BankProject
 
                 transation.Commit();
                 MessageBox.Show("Transaction Success.....");
-
+                clear();
 
             }
             catch (Exception ex)
             {
                 transation.Rollback();
                 MessageBox.Show(ex.ToString());
+                clear();
             }
             finally
             {

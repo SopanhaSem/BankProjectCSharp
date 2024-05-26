@@ -59,6 +59,7 @@
             label10 = new Label();
             button2 = new Button();
             button3 = new Button();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
@@ -288,11 +289,11 @@
             tabPage2.Controls.Add(label11);
             tabPage2.Controls.Add(txtaccno);
             tabPage2.Controls.Add(label10);
-            tabPage2.Location = new Point(4, 43);
+            tabPage2.Location = new Point(4, 24);
             tabPage2.Margin = new Padding(4, 7, 4, 7);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(4, 7, 4, 7);
-            tabPage2.Size = new Size(775, 425);
+            tabPage2.Size = new Size(775, 444);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Account";
             tabPage2.UseVisualStyleBackColor = true;
@@ -407,12 +408,27 @@
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
+            // button1
+            // 
+            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
+            button1.BackgroundImageLayout = ImageLayout.None;
+            button1.Location = new Point(185, 388);
+            button1.Margin = new Padding(4, 7, 4, 7);
+            button1.Name = "button1";
+            button1.Size = new Size(127, 59);
+            button1.TabIndex = 17;
+            button1.Text = "Clear";
+            button1.TextAlign = ContentAlignment.MiddleRight;
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click_1;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 34F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
             ClientSize = new Size(1154, 581);
+            Controls.Add(button1);
             Controls.Add(button3);
             Controls.Add(pictureBox1);
             Controls.Add(button2);
@@ -464,5 +480,6 @@
         private Label label10;
         private Button button2;
         private Button button3;
+        private Button button1;
     }
 }

@@ -25,7 +25,12 @@ namespace BankProject
             this.Hide();
             this.Close();
         }
-
+        public void clear() 
+        {
+            txtaccno.Text = "";
+            txtamount.Text = "";
+            txtdeposit.Text = "";
+        }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
@@ -98,13 +103,14 @@ namespace BankProject
 
                 transation.Commit();
                 MessageBox.Show("Transaction Success.....");
-
+                clear();
 
             }
             catch (Exception ex)
             {
                 transation.Rollback();
                 MessageBox.Show(ex.ToString());
+                clear();
             }
             finally
             {

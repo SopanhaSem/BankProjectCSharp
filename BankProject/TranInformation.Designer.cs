@@ -61,7 +61,7 @@
             btnup.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnup.Image = (Image)resources.GetObject("btnup.Image");
             btnup.ImageAlign = ContentAlignment.MiddleLeft;
-            btnup.Location = new Point(208, 260);
+            btnup.Location = new Point(272, 300);
             btnup.Margin = new Padding(4, 6, 4, 6);
             btnup.Name = "btnup";
             btnup.Size = new Size(130, 54);
@@ -78,7 +78,7 @@
             btnedit.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnedit.Image = Properties.Resources.edit;
             btnedit.ImageAlign = ContentAlignment.MiddleLeft;
-            btnedit.Location = new Point(361, 260);
+            btnedit.Location = new Point(425, 300);
             btnedit.Margin = new Padding(4, 6, 4, 6);
             btnedit.Name = "btnedit";
             btnedit.Size = new Size(130, 54);
@@ -95,7 +95,7 @@
             btndel.BackgroundImageLayout = ImageLayout.None;
             btndel.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btndel.ImageAlign = ContentAlignment.MiddleLeft;
-            btndel.Location = new Point(518, 260);
+            btndel.Location = new Point(582, 300);
             btndel.Margin = new Padding(4, 6, 4, 6);
             btndel.Name = "btndel";
             btndel.Size = new Size(130, 54);
@@ -125,7 +125,7 @@
             // 
             txtstaffid.Cursor = Cursors.No;
             txtstaffid.Font = new Font("Kh Battambang", 14.25F);
-            txtstaffid.Location = new Point(53, 116);
+            txtstaffid.Location = new Point(117, 156);
             txtstaffid.Margin = new Padding(4, 6, 4, 6);
             txtstaffid.Name = "txtstaffid";
             txtstaffid.ReadOnly = true;
@@ -135,7 +135,7 @@
             // txtstaffname
             // 
             txtstaffname.Font = new Font("Kh Battambang", 14.25F);
-            txtstaffname.Location = new Point(397, 116);
+            txtstaffname.Location = new Point(461, 156);
             txtstaffname.Margin = new Padding(4, 6, 4, 6);
             txtstaffname.Name = "txtstaffname";
             txtstaffname.Size = new Size(284, 43);
@@ -144,7 +144,7 @@
             // txtphone
             // 
             txtphone.Font = new Font("Kh Battambang", 14.25F);
-            txtphone.Location = new Point(53, 201);
+            txtphone.Location = new Point(117, 241);
             txtphone.Margin = new Padding(4, 6, 4, 6);
             txtphone.Name = "txtphone";
             txtphone.Size = new Size(284, 43);
@@ -154,7 +154,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(53, 87);
+            label1.Location = new Point(117, 127);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
             label1.Size = new Size(76, 23);
@@ -165,7 +165,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(397, 87);
+            label2.Location = new Point(461, 127);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
             label2.Size = new Size(104, 23);
@@ -176,7 +176,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(53, 180);
+            label3.Location = new Point(117, 220);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
             label3.Size = new Size(62, 23);
@@ -188,7 +188,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(772, 175);
+            label4.Location = new Point(836, 215);
             label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
             label4.Size = new Size(101, 23);
@@ -200,7 +200,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(772, 87);
+            label5.Location = new Point(836, 127);
             label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
             label5.Size = new Size(70, 23);
@@ -213,20 +213,20 @@
             dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(53, 340);
+            dataGridView1.Location = new Point(117, 380);
             dataGridView1.Margin = new Padding(4, 6, 4, 6);
             dataGridView1.MultiSelect = false;
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Size = new Size(1003, 387);
+            dataGridView1.Size = new Size(1003, 424);
             dataGridView1.TabIndex = 19;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // dateTimePicker1
             // 
             dateTimePicker1.Font = new Font("Kh Battambang", 14.25F);
-            dateTimePicker1.Location = new Point(772, 197);
+            dateTimePicker1.Location = new Point(836, 237);
             dateTimePicker1.Margin = new Padding(4, 6, 4, 6);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(284, 43);
@@ -236,7 +236,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(397, 172);
+            label6.Location = new Point(461, 212);
             label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
             label6.Size = new Size(80, 23);
@@ -246,7 +246,7 @@
             // txtpos
             // 
             txtpos.Font = new Font("Kh Battambang", 14.25F);
-            txtpos.Location = new Point(397, 201);
+            txtpos.Location = new Point(461, 241);
             txtpos.Margin = new Padding(4, 6, 4, 6);
             txtpos.Name = "txtpos";
             txtpos.Size = new Size(284, 43);
@@ -257,7 +257,7 @@
             comboBox1.Font = new Font("Kh Battambang", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Male", "Female" });
-            comboBox1.Location = new Point(772, 116);
+            comboBox1.Location = new Point(836, 156);
             comboBox1.Margin = new Padding(4, 6, 4, 6);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(284, 42);
@@ -269,7 +269,7 @@
             btnadd.BackgroundImage = (Image)resources.GetObject("btnadd.BackgroundImage");
             btnadd.BackgroundImageLayout = ImageLayout.None;
             btnadd.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnadd.Location = new Point(53, 260);
+            btnadd.Location = new Point(117, 300);
             btnadd.Margin = new Padding(4, 6, 4, 6);
             btnadd.Name = "btnadd";
             btnadd.Size = new Size(130, 54);
@@ -294,7 +294,7 @@
             // 
             panel1.BackColor = Color.FromArgb(128, 128, 255);
             panel1.Controls.Add(label7);
-            panel1.Location = new Point(319, 2);
+            panel1.Location = new Point(371, 2);
             panel1.Name = "panel1";
             panel1.Size = new Size(447, 68);
             panel1.TabIndex = 32;
@@ -303,19 +303,20 @@
             // 
             button1.Image = Properties.Resources.icons8_clear_50;
             button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(655, 260);
+            button1.Location = new Point(719, 300);
             button1.Name = "button1";
             button1.Size = new Size(130, 54);
             button1.TabIndex = 33;
             button1.Text = "Clear";
             button1.TextAlign = ContentAlignment.MiddleRight;
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // TranInformation
             // 
             AutoScaleDimensions = new SizeF(10F, 34F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1102, 743);
+            ClientSize = new Size(1228, 835);
             Controls.Add(button1);
             Controls.Add(panel1);
             Controls.Add(btnadd);

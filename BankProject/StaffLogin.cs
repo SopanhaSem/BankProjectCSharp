@@ -24,7 +24,11 @@ namespace BankProject
         {
 
         }
-
+        void clearText()
+        {
+            txtpass.Text = "";
+            textBox1.Text = "";
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             string username = textBox1.Text;
@@ -33,13 +37,15 @@ namespace BankProject
             if (ValidateLogin(username, password))
             {
                 Session.Username = username; // Set the username in the session
-                Form3 form3 = new Form3();
-                form3.Show();
+                ProgressBar progressBar = new ProgressBar();
+                progressBar.Show();
                 this.Hide();
+        
             }
             else
             {
                 MessageBox.Show("Invalid Username or Password");
+                clearText();
             }
         }
         private bool ValidateLogin(string username, string password)
@@ -57,28 +63,31 @@ namespace BankProject
                         if (result != null)
                         {
                             string storedHash = result.ToString();
-                            if (!string.IsNullOrEmpty(storedHash))
+                            if (!string.IsNullOrEmpty(storedHash) && password == storedHash)
                             {
-                                if (password == storedHash) // Simple password comparison
-                                {
-                                    // Optionally update LastLogin timestamp
-                                    UpdateLastLogin(conn, username);
-                                    return true;
-                                }
+                                // Optionally update LastLogin timestamp
+                                UpdateLastLogin(conn, username);
+                                return true;
+                            }
+                            else
+                            {
+                                MessageBox.Show("Invalid Username or Password");
+                                return false;
                             }
                         }
                         else
                         {
-                            MessageBox.Show("Username not found.");
+                            MessageBox.Show("Invalid Username or Password");
+                            return false;
                         }
                     }
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show($"Error: {ex.Message}");
+                    return false;
                 }
             }
-            return false;
         }
         private void UpdateLastLogin(MySqlConnection conn, string username)
         {
@@ -92,7 +101,8 @@ namespace BankProject
         }
         private void StaffLogin_Load(object sender, EventArgs e)
         {
-
+            textBox1.TabStop = false;
+            txtpass.TabStop = false;
         }
 
         private void button2_Click(object sender, EventArgs e)

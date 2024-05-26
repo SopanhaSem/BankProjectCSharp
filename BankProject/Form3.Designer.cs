@@ -50,6 +50,7 @@
             label9 = new Label();
             timer1 = new System.Windows.Forms.Timer(components);
             panel3 = new Panel();
+            label10 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -276,11 +277,22 @@
             panel3.Size = new Size(147, 55);
             panel3.TabIndex = 22;
             // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Kh Battambang", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label10.Location = new Point(22, 327);
+            label10.Name = "label10";
+            label10.Size = new Size(82, 38);
+            label10.TabIndex = 23;
+            label10.Text = "label10";
+            // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1030, 815);
+            Controls.Add(label10);
             Controls.Add(panel3);
             Controls.Add(label9);
             Controls.Add(label8);
@@ -337,5 +349,6 @@
         private Label label9;
         private System.Windows.Forms.Timer timer1;
         private Panel panel3;
+        private Label label10;
     }
 }

@@ -24,6 +24,7 @@ namespace BankProject
             Form3 form = new Form3();
             form.Show();
             this.Hide();
+            this.Close();
         }
 
         private void TranInformation_Load(object sender, EventArgs e)
@@ -165,6 +166,20 @@ namespace BankProject
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
+        private bool ValidateInput()
+        {
+            if (string.IsNullOrEmpty(txtstaffid.Text) ||
+                string.IsNullOrEmpty(txtstaffname.Text) ||
+                comboBox1.SelectedIndex == -1 ||
+                string.IsNullOrEmpty(txtpos.Text) ||
+                string.IsNullOrEmpty(txtphone.Text))
+            {
+                MessageBox.Show("Please fill in all required fields.");
+                return false;
+            }
+            // Add more validation rules as needed
+            return true;
+        }
         void ClearTextBoxes()
         {
             txtstaffid.Clear();
@@ -217,11 +232,9 @@ namespace BankProject
                             cmd.CommandText = "DELETE FROM staff WHERE stid = @stid";
                             cmd.Parameters.AddWithValue("@stid", stid);
                             cmd.ExecuteNonQuery();
+                            // Remove the selected row from the DataGridView
+                            dataGridView1.Rows.Remove(selectedRow);
                             MessageBox.Show("Record deleted successfully.");
-                            MySqlDataAdapter adapter = new MySqlDataAdapter("SELECT * FROM staff", con);
-                            DataTable dt = new DataTable();
-                            adapter.Fill(dt);
-                            dataGridView1.DataSource = dt;
                         }
                     }
                     catch (Exception ex)
@@ -239,6 +252,11 @@ namespace BankProject
         private void pictureBox6_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ClearTextBoxes();
         }
     }
 }

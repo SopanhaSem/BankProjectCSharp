@@ -19,7 +19,20 @@ namespace BankProject
         {
 
         }
-
+        public void clear()
+        {
+            txtaccno.Text = "";
+            txtbalance.Text = "";
+            txtcity.Text = "";
+            txtdes.Text = "";
+            txtemail.Text = "";
+            txtfname.Text = "";
+            txtlname.Text = "";
+            txtphone.Text = "";
+            txtstate.Text = "";
+            txtstreet.Text = "";
+            cbacctype.Items.Clear();
+        }
         private void txtpass_TextChanged(object sender, EventArgs e)
         {
 
@@ -87,7 +100,7 @@ namespace BankProject
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            string  lname, fname, street, city, state, phone, date, email, acno, actype, des, bal;
+            string lname, fname, street, city, state, phone, date, email, acno, actype, des, bal;
             lname = txtlname.Text;
             fname = txtfname.Text;
             street = txtstreet.Text;
@@ -105,11 +118,20 @@ namespace BankProject
             MySqlCommand cmd = new MySqlCommand();
             MySqlTransaction transation;
 
-            transation  = con.BeginTransaction();
+            transation = con.BeginTransaction();
 
             cmd.Connection = con;
             cmd.Transaction = transation;
-
+            if (string.IsNullOrWhiteSpace(lname) || string.IsNullOrWhiteSpace(fname) ||
+            string.IsNullOrWhiteSpace(street) || string.IsNullOrWhiteSpace(city) ||
+            string.IsNullOrWhiteSpace(state) || string.IsNullOrWhiteSpace(phone) ||
+            string.IsNullOrWhiteSpace(date) || string.IsNullOrWhiteSpace(email) ||
+            string.IsNullOrWhiteSpace(acno) || string.IsNullOrWhiteSpace(actype) ||
+            string.IsNullOrWhiteSpace(des) || string.IsNullOrWhiteSpace(bal))
+            {
+                MessageBox.Show("All fields are required.");
+                return;
+            }
             try
             {
                 cmd.CommandText = "INSERT INTO customer(lastname, firstname, street, city, state, phone, date, email) " +
@@ -134,19 +156,25 @@ namespace BankProject
 
                 transation.Commit();
                 MessageBox.Show("Record add");
-
+                clear();
 
             }
             catch (Exception ex)
             {
                 transation.Rollback();
                 MessageBox.Show(ex.ToString());
+                clear();
             }
             finally
             {
                 con.Close();
             }
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            clear();
         }
     }
 }

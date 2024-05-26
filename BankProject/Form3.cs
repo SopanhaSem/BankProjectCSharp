@@ -23,32 +23,8 @@ namespace BankProject
             string username = Session.Username;
             label8.Text = username;
             label9.Text = DateTime.Now.ToLongTimeString();
+            label10.Text = DateTime.Now.ToString("dd-MM-yyyy");
         }
-        //private string GetUsernameFromDatabase()
-        //{
-        //    string username = "";
-        //    using (MySqlConnection conn = new MySqlConnection(connectionString))
-        //    {
-        //        try
-        //        {
-        //            conn.Open();
-        //            string query = "SELECT Username FROM StaffLogin"; // Assuming you want to retrieve the first username
-        //            using (MySqlCommand cmd = new MySqlCommand(query, conn))
-        //            {
-        //                object result = cmd.ExecuteScalar();
-        //                if (result != null)
-        //                {
-        //                    username = result.ToString();
-        //                }
-        //            }
-        //        }
-        //        catch (Exception ex)
-        //        {
-        //            MessageBox.Show($"Error: {ex.Message}");
-        //        }
-        //    }
-        //    return username;
-        //}
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -111,6 +87,7 @@ namespace BankProject
         private void button1_Click(object sender, EventArgs e)
         {
             this.Dispose();
+            this.Close();
         }
 
         private void label8_Click(object sender, EventArgs e)
