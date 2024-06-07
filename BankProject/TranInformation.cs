@@ -21,9 +21,9 @@ namespace BankProject
         MySqlConnection con = new MySqlConnection("server = localhost; database = bankdb; username = root;password = ;");
         private void button5_Click(object sender, EventArgs e)
         {
-            Form3 form = new Form3();
-            form.Show();
             this.Hide();
+            Form3 form = new Form3();
+            form.ShowDialog();
             this.Close();
         }
 
@@ -257,6 +257,11 @@ namespace BankProject
         private void button1_Click(object sender, EventArgs e)
         {
             ClearTextBoxes();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -25,10 +25,11 @@ namespace BankProject
             }
             else
             {
+                this.Hide();
                 timer1.Enabled = false; // Stop the timer
                 Form3 f3 = new Form3();
-                this.Hide();
-                f3.Show();
+                f3.ShowDialog();
+                this.Close();
             }
         }
     }

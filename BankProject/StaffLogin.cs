@@ -36,10 +36,11 @@ namespace BankProject
 
             if (ValidateLogin(username, password))
             {
+                this.Hide();
                 Session.Username = username; // Set the username in the session
                 ProgressBar progressBar = new ProgressBar();
-                progressBar.Show();
-                this.Hide();
+                progressBar.ShowDialog();
+                this.Close();
         
             }
             else
@@ -107,7 +108,7 @@ namespace BankProject
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            this.Close();
         }
     }
 }

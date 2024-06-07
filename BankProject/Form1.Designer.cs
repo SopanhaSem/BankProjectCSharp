@@ -289,11 +289,11 @@
             tabPage2.Controls.Add(label11);
             tabPage2.Controls.Add(txtaccno);
             tabPage2.Controls.Add(label10);
-            tabPage2.Location = new Point(4, 24);
+            tabPage2.Location = new Point(4, 43);
             tabPage2.Margin = new Padding(4, 7, 4, 7);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(4, 7, 4, 7);
-            tabPage2.Size = new Size(775, 444);
+            tabPage2.Size = new Size(775, 425);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Account";
             tabPage2.UseVisualStyleBackColor = true;
@@ -403,7 +403,7 @@
             button3.Name = "button3";
             button3.Size = new Size(127, 59);
             button3.TabIndex = 16;
-            button3.Text = "Close";
+            button3.Text = "Exit";
             button3.TextAlign = ContentAlignment.MiddleRight;
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
@@ -427,7 +427,7 @@
             AutoScaleDimensions = new SizeF(10F, 34F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
-            ClientSize = new Size(1154, 581);
+            ClientSize = new Size(1154, 546);
             Controls.Add(button1);
             Controls.Add(button3);
             Controls.Add(pictureBox1);

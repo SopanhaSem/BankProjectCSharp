@@ -20,9 +20,9 @@ namespace BankProject
         MySqlConnection con = new MySqlConnection("server = localhost; database = bankdb; username = root;password = ;");
         private void button5_Click(object sender, EventArgs e)
         {
-            Form3 form3 = new Form3();
-            form3.Show();
             this.Hide();
+            Form3 form3 = new Form3();
+            form3.ShowDialog();
             this.Close();
         }
 
@@ -92,6 +92,11 @@ namespace BankProject
         }
 
         private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }

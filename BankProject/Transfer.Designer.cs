@@ -50,7 +50,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Kh Battambang", 14.25F);
-            label5.Location = new Point(210, 321);
+            label5.Location = new Point(9, 175);
             label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
             label5.Size = new Size(52, 34);
@@ -60,7 +60,7 @@
             // dateTimePicker1
             // 
             dateTimePicker1.Font = new Font("Kh Battambang", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dateTimePicker1.Location = new Point(210, 357);
+            dateTimePicker1.Location = new Point(9, 211);
             dateTimePicker1.Margin = new Padding(4, 7, 4, 7);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(347, 45);
@@ -69,7 +69,7 @@
             // txtamount
             // 
             txtamount.Font = new Font("Kh Battambang", 15.75F);
-            txtamount.Location = new Point(586, 357);
+            txtamount.Location = new Point(364, 209);
             txtamount.Margin = new Padding(4, 7, 4, 7);
             txtamount.Name = "txtamount";
             txtamount.Size = new Size(347, 47);
@@ -79,7 +79,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Kh Battambang", 14.25F);
-            label6.Location = new Point(586, 321);
+            label6.Location = new Point(364, 173);
             label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
             label6.Size = new Size(79, 34);
@@ -89,7 +89,7 @@
             // txttacc
             // 
             txttacc.Font = new Font("Kh Battambang", 15.75F);
-            txttacc.Location = new Point(586, 259);
+            txttacc.Location = new Point(364, 121);
             txttacc.Margin = new Padding(4, 7, 4, 7);
             txttacc.Name = "txttacc";
             txttacc.Size = new Size(347, 47);
@@ -99,7 +99,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Kh Battambang", 14.25F);
-            label1.Location = new Point(586, 222);
+            label1.Location = new Point(364, 84);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
             label1.Size = new Size(108, 34);
@@ -109,7 +109,7 @@
             // txtfacc
             // 
             txtfacc.Font = new Font("Kh Battambang", 15.75F);
-            txtfacc.Location = new Point(210, 259);
+            txtfacc.Location = new Point(9, 123);
             txtfacc.Margin = new Padding(4, 7, 4, 7);
             txtfacc.Name = "txtfacc";
             txtfacc.Size = new Size(347, 47);
@@ -119,7 +119,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Kh Battambang", 14.25F);
-            label2.Location = new Point(210, 222);
+            label2.Location = new Point(9, 86);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
             label2.Size = new Size(131, 34);
@@ -130,12 +130,13 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Kh Battambang", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(33, 24);
+            label3.Location = new Point(37, 6);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
             label3.Size = new Size(132, 58);
             label3.TabIndex = 56;
             label3.Text = "Tranfer";
+            label3.Click += label3_Click;
             // 
             // button2
             // 
@@ -144,7 +145,7 @@
             button2.BackgroundImageLayout = ImageLayout.None;
             button2.Font = new Font("Times New Roman", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button2.ImageAlign = ContentAlignment.MiddleLeft;
-            button2.Location = new Point(210, 408);
+            button2.Location = new Point(10, 272);
             button2.Margin = new Padding(4, 7, 4, 7);
             button2.Name = "button2";
             button2.Size = new Size(176, 61);
@@ -160,12 +161,12 @@
             button5.Font = new Font("Times New Roman", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button5.Image = Properties.Resources.close2;
             button5.ImageAlign = ContentAlignment.MiddleLeft;
-            button5.Location = new Point(13, 16);
+            button5.Location = new Point(194, 272);
             button5.Margin = new Padding(4, 7, 4, 7);
             button5.Name = "button5";
-            button5.Size = new Size(134, 60);
+            button5.Size = new Size(134, 61);
             button5.TabIndex = 59;
-            button5.Text = "Close";
+            button5.Text = "Exit";
             button5.TextAlign = ContentAlignment.MiddleRight;
             button5.UseVisualStyleBackColor = false;
             button5.Click += button5_Click;
@@ -174,10 +175,10 @@
             // 
             pictureBox1.BackColor = SystemColors.Control;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(586, 420);
+            pictureBox1.Location = new Point(416, 270);
             pictureBox1.Margin = new Padding(4, 7, 4, 7);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(446, 392);
+            pictureBox1.Size = new Size(295, 302);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 60;
             pictureBox1.TabStop = false;
@@ -187,9 +188,9 @@
             // 
             panel1.BackColor = Color.FromArgb(128, 128, 255);
             panel1.Controls.Add(label3);
-            panel1.Location = new Point(465, 85);
+            panel1.Location = new Point(12, 12);
             panel1.Name = "panel1";
-            panel1.Size = new Size(200, 103);
+            panel1.Size = new Size(200, 64);
             panel1.TabIndex = 63;
             // 
             // Transfer
@@ -197,7 +198,7 @@
             AutoScaleDimensions = new SizeF(10F, 34F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
-            ClientSize = new Size(1143, 897);
+            ClientSize = new Size(722, 582);
             Controls.Add(panel1);
             Controls.Add(pictureBox1);
             Controls.Add(button5);

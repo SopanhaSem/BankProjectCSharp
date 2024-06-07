@@ -32,9 +32,9 @@ namespace BankProject
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            Deposit form3 = new Deposit();
-            form3.Show();
             this.Hide();
+            Deposit form3 = new Deposit();
+            form3.ShowDialog();
             this.Close();
         }
 
@@ -45,30 +45,34 @@ namespace BankProject
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Form4 form4 = new Form4();
-            form4.Show();
             this.Hide();
+            Form4 form4 = new Form4();
+            form4.ShowDialog();
             this.Close();
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1();
-            form1.Show();
             this.Hide();
+            Form1 form1 = new Form1();
+            form1.ShowDialog();
             this.Close();
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Transfer form1 = new Transfer();
-            form1.Show(); this.Hide(); this.Close();
+            form1.ShowDialog();
+            this.Close();
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
+            this.Hide();
             TranInformation form1 = new TranInformation();
-            form1.Show(); this.Hide(); this.Close();
+            form1.ShowDialog(); 
+            this.Close();
         }
 
         private void pictureBox2_MouseHover(object sender, EventArgs e)
@@ -78,15 +82,14 @@ namespace BankProject
 
         private void button3_Click(object sender, EventArgs e)
         {
-            StaffLogin stf = new StaffLogin();
-            stf.Show();
             this.Hide();
+            StaffLogin stf = new StaffLogin();
+            stf.ShowDialog();
             this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Dispose();
             this.Close();
         }
 

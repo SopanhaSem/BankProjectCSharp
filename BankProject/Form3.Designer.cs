@@ -51,6 +51,12 @@
             timer1 = new System.Windows.Forms.Timer(components);
             panel3 = new Panel();
             label10 = new Label();
+            panel4 = new Panel();
+            panel5 = new Panel();
+            panel6 = new Panel();
+            panel7 = new Panel();
+            panel8 = new Panel();
+            panel9 = new Panel();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -64,7 +70,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Verdana", 26.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(351, 21);
+            label1.Location = new Point(328, 20);
             label1.Name = "label1";
             label1.Size = new Size(323, 42);
             label1.TabIndex = 2;
@@ -75,7 +81,7 @@
             // 
             pictureBox2.BackColor = Color.FromArgb(255, 192, 255);
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(304, 215);
+            pictureBox2.Location = new Point(255, 133);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(173, 171);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
@@ -89,7 +95,7 @@
             pictureBox1.BackColor = Color.Red;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.InitialImage = (Image)resources.GetObject("pictureBox1.InitialImage");
-            pictureBox1.Location = new Point(553, 215);
+            pictureBox1.Location = new Point(497, 133);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(173, 171);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -102,7 +108,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Times New Roman", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(304, 389);
+            label2.Location = new Point(255, 307);
             label2.Name = "label2";
             label2.Size = new Size(108, 31);
             label2.TabIndex = 6;
@@ -112,7 +118,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Times New Roman", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(553, 389);
+            label3.Location = new Point(497, 307);
             label3.Name = "label3";
             label3.Size = new Size(121, 31);
             label3.TabIndex = 7;
@@ -122,7 +128,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Times New Roman", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(304, 619);
+            label5.Location = new Point(255, 535);
             label5.Name = "label5";
             label5.Size = new Size(184, 31);
             label5.TabIndex = 10;
@@ -132,7 +138,7 @@
             // 
             pictureBox4.BackColor = Color.White;
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(304, 445);
+            pictureBox4.Location = new Point(255, 361);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(173, 171);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
@@ -145,7 +151,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Times New Roman", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(553, 619);
+            label6.Location = new Point(497, 535);
             label6.Name = "label6";
             label6.Size = new Size(103, 31);
             label6.TabIndex = 12;
@@ -155,7 +161,7 @@
             // 
             pictureBox5.BackColor = Color.FromArgb(255, 224, 192);
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(553, 445);
+            pictureBox5.Location = new Point(497, 361);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(173, 171);
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
@@ -168,7 +174,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Times New Roman", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.Location = new Point(795, 389);
+            label7.Location = new Point(734, 307);
             label7.Name = "label7";
             label7.Size = new Size(200, 31);
             label7.TabIndex = 14;
@@ -178,7 +184,7 @@
             // 
             pictureBox6.BackColor = Color.FromArgb(255, 224, 192);
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(795, 215);
+            pictureBox6.Location = new Point(734, 133);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(173, 171);
             pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
@@ -199,16 +205,16 @@
             // panel2
             // 
             panel2.BackColor = Color.Black;
-            panel2.Location = new Point(192, 101);
+            panel2.Location = new Point(228, 101);
             panel2.Name = "panel2";
-            panel2.Size = new Size(8, 702);
+            panel2.Size = new Size(8, 480);
             panel2.TabIndex = 16;
             // 
             // button3
             // 
             button3.BackgroundImage = (Image)resources.GetObject("button3.BackgroundImage");
             button3.BackgroundImageLayout = ImageLayout.None;
-            button3.Location = new Point(13, 740);
+            button3.Location = new Point(22, 521);
             button3.Margin = new Padding(4, 7, 4, 7);
             button3.Name = "button3";
             button3.Size = new Size(127, 59);
@@ -222,7 +228,7 @@
             // 
             button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
             button1.BackgroundImageLayout = ImageLayout.None;
-            button1.Location = new Point(13, 678);
+            button1.Location = new Point(22, 459);
             button1.Margin = new Padding(4, 7, 4, 7);
             button1.Name = "button1";
             button1.Size = new Size(127, 59);
@@ -257,7 +263,7 @@
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Kh Battambang", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label9.Location = new Point(22, 289);
+            label9.Location = new Point(787, 494);
             label9.Name = "label9";
             label9.Size = new Size(71, 38);
             label9.TabIndex = 21;
@@ -281,17 +287,71 @@
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Kh Battambang", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label10.Location = new Point(22, 327);
+            label10.Location = new Point(787, 532);
             label10.Name = "label10";
             label10.Size = new Size(82, 38);
             label10.TabIndex = 23;
             label10.Text = "label10";
             // 
+            // panel4
+            // 
+            panel4.BackColor = Color.Black;
+            panel4.Location = new Point(459, 133);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(8, 171);
+            panel4.TabIndex = 17;
+            // 
+            // panel5
+            // 
+            panel5.BackColor = Color.Black;
+            panel5.Location = new Point(700, 133);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(8, 171);
+            panel5.TabIndex = 18;
+            // 
+            // panel6
+            // 
+            panel6.BackColor = Color.Black;
+            panel6.Location = new Point(459, 361);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(8, 171);
+            panel6.TabIndex = 18;
+            // 
+            // panel7
+            // 
+            panel7.BackColor = Color.Black;
+            panel7.Location = new Point(700, 361);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(8, 171);
+            panel7.TabIndex = 19;
+            // 
+            // panel8
+            // 
+            panel8.BackColor = Color.FromArgb(64, 0, 64);
+            panel8.Location = new Point(255, 101);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(656, 10);
+            panel8.TabIndex = 24;
+            // 
+            // panel9
+            // 
+            panel9.BackColor = Color.FromArgb(64, 0, 64);
+            panel9.Location = new Point(255, 571);
+            panel9.Name = "panel9";
+            panel9.Size = new Size(656, 10);
+            panel9.TabIndex = 25;
+            // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1030, 815);
+            ClientSize = new Size(934, 602);
+            Controls.Add(panel9);
+            Controls.Add(panel8);
+            Controls.Add(panel7);
+            Controls.Add(panel6);
+            Controls.Add(panel5);
+            Controls.Add(panel4);
             Controls.Add(label10);
             Controls.Add(panel3);
             Controls.Add(label9);
@@ -350,5 +410,11 @@
         private System.Windows.Forms.Timer timer1;
         private Panel panel3;
         private Label label10;
+        private Panel panel4;
+        private Panel panel5;
+        private Panel panel6;
+        private Panel panel7;
+        private Panel panel8;
+        private Panel panel9;
     }
 }
