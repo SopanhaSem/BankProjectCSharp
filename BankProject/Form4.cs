@@ -74,7 +74,7 @@ namespace BankProject
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show(ex.Message);
             }
             finally
             {
@@ -134,6 +134,11 @@ namespace BankProject
             {
                 con.Close();
             }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

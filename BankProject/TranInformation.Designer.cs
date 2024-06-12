@@ -37,36 +37,34 @@
             txtstaffname = new TextBox();
             txtphone = new TextBox();
             label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
             dataGridView1 = new DataGridView();
             dateTimePicker1 = new DateTimePicker();
-            label6 = new Label();
             txtpos = new TextBox();
             comboBox1 = new ComboBox();
             btnadd = new Button();
             label7 = new Label();
-            panel1 = new Panel();
             button1 = new Button();
+            label8 = new Label();
+            label2 = new Label();
+            label5 = new Label();
+            label3 = new Label();
+            label6 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // btnup
             // 
             btnup.BackColor = Color.FromArgb(0, 192, 0);
             btnup.BackgroundImageLayout = ImageLayout.Zoom;
-            btnup.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnup.Font = new Font("Kh Battambang", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnup.Image = (Image)resources.GetObject("btnup.Image");
             btnup.ImageAlign = ContentAlignment.MiddleLeft;
-            btnup.Location = new Point(167, 260);
+            btnup.Location = new Point(150, 260);
             btnup.Margin = new Padding(4, 6, 4, 6);
             btnup.Name = "btnup";
-            btnup.Size = new Size(130, 58);
+            btnup.Size = new Size(147, 58);
             btnup.TabIndex = 1;
-            btnup.Text = "Update";
+            btnup.Text = "កែទិន្ន័យ";
             btnup.TextAlign = ContentAlignment.MiddleRight;
             btnup.UseVisualStyleBackColor = false;
             btnup.Click += btnadd_Click;
@@ -75,15 +73,15 @@
             // 
             btnedit.BackColor = Color.FromArgb(192, 192, 255);
             btnedit.BackgroundImageLayout = ImageLayout.None;
-            btnedit.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnedit.Font = new Font("Kh Battambang", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnedit.Image = Properties.Resources.edit;
             btnedit.ImageAlign = ContentAlignment.MiddleLeft;
-            btnedit.Location = new Point(320, 260);
+            btnedit.Location = new Point(305, 260);
             btnedit.Margin = new Padding(4, 6, 4, 6);
             btnedit.Name = "btnedit";
-            btnedit.Size = new Size(130, 58);
+            btnedit.Size = new Size(145, 58);
             btnedit.TabIndex = 2;
-            btnedit.Text = "Edit";
+            btnedit.Text = "ចាប់ទិន្ន័យ";
             btnedit.TextAlign = ContentAlignment.MiddleRight;
             btnedit.UseVisualStyleBackColor = false;
             btnedit.Click += btnedit_Click;
@@ -93,14 +91,14 @@
             btndel.BackColor = Color.Red;
             btndel.BackgroundImage = (Image)resources.GetObject("btndel.BackgroundImage");
             btndel.BackgroundImageLayout = ImageLayout.None;
-            btndel.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btndel.Font = new Font("Kh Battambang", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btndel.ImageAlign = ContentAlignment.MiddleLeft;
-            btndel.Location = new Point(477, 260);
+            btndel.Location = new Point(458, 260);
             btndel.Margin = new Padding(4, 6, 4, 6);
             btndel.Name = "btndel";
             btndel.Size = new Size(130, 58);
             btndel.TabIndex = 3;
-            btndel.Text = "Remove";
+            btndel.Text = "លុប";
             btndel.TextAlign = ContentAlignment.MiddleRight;
             btndel.UseVisualStyleBackColor = false;
             btndel.Click += btndel_Click;
@@ -108,15 +106,15 @@
             // button5
             // 
             button5.BackColor = Color.AliceBlue;
-            button5.Font = new Font("Times New Roman", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button5.Font = new Font("Kh Battambang", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button5.Image = Properties.Resources.close3;
             button5.ImageAlign = ContentAlignment.MiddleLeft;
-            button5.Location = new Point(878, 256);
+            button5.Location = new Point(867, 256);
             button5.Margin = new Padding(4, 6, 4, 6);
             button5.Name = "button5";
-            button5.Size = new Size(137, 58);
+            button5.Size = new Size(148, 58);
             button5.TabIndex = 8;
-            button5.Text = "Exit";
+            button5.Text = "ចាកចេញ";
             button5.TextAlign = ContentAlignment.MiddleRight;
             button5.UseVisualStyleBackColor = false;
             button5.Click += button5_Click;
@@ -153,59 +151,13 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(12, 91);
+            label1.Font = new Font("Kh Battambang", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(13, 82);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(76, 23);
+            label1.Size = new Size(116, 38);
             label1.TabIndex = 14;
-            label1.Text = "Staff ID";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(304, 90);
-            label2.Margin = new Padding(4, 0, 4, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(104, 23);
-            label2.TabIndex = 15;
-            label2.Text = "Staff Name";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(12, 184);
-            label3.Margin = new Padding(4, 0, 4, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(62, 23);
-            label3.TabIndex = 16;
-            label3.Text = "Phone";
-            label3.Click += label3_Click;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(659, 175);
-            label4.Margin = new Padding(4, 0, 4, 0);
-            label4.Name = "label4";
-            label4.Size = new Size(101, 23);
-            label4.TabIndex = 17;
-            label4.Text = "Hired Date";
-            label4.Click += label4_Click;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(659, 91);
-            label5.Margin = new Padding(4, 0, 4, 0);
-            label5.Name = "label5";
-            label5.Size = new Size(70, 23);
-            label5.TabIndex = 18;
-            label5.Text = "Gender";
+            label1.Text = "បុគ្គលិក-កូដ";
             // 
             // dataGridView1
             // 
@@ -226,22 +178,11 @@
             // dateTimePicker1
             // 
             dateTimePicker1.Font = new Font("Kh Battambang", 14.25F);
-            dateTimePicker1.Location = new Point(659, 201);
+            dateTimePicker1.Location = new Point(659, 205);
             dateTimePicker1.Margin = new Padding(4, 6, 4, 6);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(356, 43);
             dateTimePicker1.TabIndex = 20;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(304, 175);
-            label6.Margin = new Padding(4, 0, 4, 0);
-            label6.Name = "label6";
-            label6.Size = new Size(80, 23);
-            label6.TabIndex = 22;
-            label6.Text = "Position";
             // 
             // txtpos
             // 
@@ -269,13 +210,13 @@
             btnadd.BackColor = Color.FromArgb(128, 128, 255);
             btnadd.BackgroundImage = (Image)resources.GetObject("btnadd.BackgroundImage");
             btnadd.BackgroundImageLayout = ImageLayout.None;
-            btnadd.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnadd.Font = new Font("Kh Battambang", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnadd.Location = new Point(12, 260);
             btnadd.Margin = new Padding(4, 6, 4, 6);
             btnadd.Name = "btnadd";
             btnadd.Size = new Size(130, 58);
             btnadd.TabIndex = 24;
-            btnadd.Text = "Save";
+            btnadd.Text = "រក្សាទុក";
             btnadd.TextAlign = ContentAlignment.MiddleRight;
             btnadd.UseVisualStyleBackColor = false;
             btnadd.Click += btnadd_Click_1;
@@ -283,53 +224,99 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Font = new Font("Kh Battambang", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.Location = new Point(378, 6);
+            label7.Font = new Font("Moul", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.Location = new Point(374, 9);
             label7.Margin = new Padding(4, 0, 4, 0);
             label7.Name = "label7";
-            label7.Size = new Size(273, 58);
+            label7.Size = new Size(277, 58);
             label7.TabIndex = 27;
-            label7.Text = "Staff Information";
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.FromArgb(128, 128, 255);
-            panel1.Controls.Add(label7);
-            panel1.Location = new Point(12, 12);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1003, 68);
-            panel1.TabIndex = 32;
+            label7.Text = "ព័ត៏មានបុគ្គលិក";
             // 
             // button1
             // 
             button1.Image = Properties.Resources.icons8_clear_50;
             button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(614, 260);
+            button1.Location = new Point(595, 261);
             button1.Name = "button1";
             button1.Size = new Size(130, 58);
             button1.TabIndex = 33;
-            button1.Text = "Clear";
+            button1.Text = "សម្អាត";
             button1.TextAlign = ContentAlignment.MiddleRight;
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Kh Battambang", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label8.Location = new Point(304, 82);
+            label8.Margin = new Padding(4, 0, 4, 0);
+            label8.Name = "label8";
+            label8.Size = new Size(134, 38);
+            label8.TabIndex = 34;
+            label8.Text = "ឈ្មោះបុគ្គលិក";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Kh Battambang", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(660, 80);
+            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(52, 38);
+            label2.TabIndex = 35;
+            label2.Text = "ភេទ";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Kh Battambang", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Location = new Point(12, 167);
+            label5.Margin = new Padding(4, 0, 4, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(117, 38);
+            label5.TabIndex = 36;
+            label5.Text = "លេខទូរស័ព្ទ";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Kh Battambang", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(304, 167);
+            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(109, 38);
+            label3.TabIndex = 37;
+            label3.Text = "មុខដំណែង";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Kh Battambang", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.Location = new Point(661, 164);
+            label6.Margin = new Padding(4, 0, 4, 0);
+            label6.Name = "label6";
+            label6.Size = new Size(124, 38);
+            label6.TabIndex = 38;
+            label6.Text = "ថ្ងៃចូលធ្វើការ";
             // 
             // TranInformation
             // 
             AutoScaleDimensions = new SizeF(10F, 34F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1034, 782);
+            Controls.Add(label6);
+            Controls.Add(label3);
+            Controls.Add(label5);
+            Controls.Add(label2);
+            Controls.Add(label8);
+            Controls.Add(label7);
             Controls.Add(button1);
-            Controls.Add(panel1);
             Controls.Add(btnadd);
             Controls.Add(comboBox1);
-            Controls.Add(label6);
             Controls.Add(txtpos);
             Controls.Add(dateTimePicker1);
             Controls.Add(dataGridView1);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(txtphone);
             Controls.Add(txtstaffname);
@@ -346,8 +333,6 @@
             Text = "x";
             Load += TranInformation_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -361,18 +346,17 @@
         private TextBox txtstaffname;
         private TextBox txtphone;
         private Label label1;
-        private Label label2;
-        private Label label3;
-        private Label label4;
-        private Label label5;
         private DataGridView dataGridView1;
         private DateTimePicker dateTimePicker1;
-        private Label label6;
         private TextBox txtpos;
         private ComboBox comboBox1;
         private Button btnadd;
         private Label label7;
-        private Panel panel1;
         private Button button1;
+        private Label label8;
+        private Label label2;
+        private Label label5;
+        private Label label3;
+        private Label label6;
     }
 }

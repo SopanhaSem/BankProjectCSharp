@@ -44,16 +44,17 @@
             // timer1
             // 
             timer1.Enabled = true;
+            timer1.Interval = 30;
             timer1.Tick += timer1_Tick;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(172, 246);
+            label1.Location = new Point(238, 246);
             label1.Name = "label1";
-            label1.Size = new Size(216, 38);
+            label1.Size = new Size(114, 38);
             label1.TabIndex = 1;
-            label1.Text = "Loading Please Wait..";
+            label1.Text = "សូមរងចាំ...";
             // 
             // ProgressBar
             // 

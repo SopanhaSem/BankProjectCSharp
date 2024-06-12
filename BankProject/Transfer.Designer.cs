@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Transfer));
-            label5 = new Label();
             dateTimePicker1 = new DateTimePicker();
             txtamount = new TextBox();
             label6 = new Label();
@@ -37,25 +36,13 @@
             label1 = new Label();
             txtfacc = new TextBox();
             label2 = new Label();
-            label3 = new Label();
             button2 = new Button();
             button5 = new Button();
             pictureBox1 = new PictureBox();
-            panel1 = new Panel();
+            label3 = new Label();
+            label4 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            panel1.SuspendLayout();
             SuspendLayout();
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Kh Battambang", 14.25F);
-            label5.Location = new Point(9, 175);
-            label5.Margin = new Padding(4, 0, 4, 0);
-            label5.Name = "label5";
-            label5.Size = new Size(52, 34);
-            label5.TabIndex = 55;
-            label5.Text = "Date";
             // 
             // dateTimePicker1
             // 
@@ -82,9 +69,9 @@
             label6.Location = new Point(364, 173);
             label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
-            label6.Size = new Size(79, 34);
+            label6.Size = new Size(119, 34);
             label6.TabIndex = 52;
-            label6.Text = "Amount";
+            label6.Text = "ចំនួនទឹកប្រាក់";
             // 
             // txttacc
             // 
@@ -102,9 +89,9 @@
             label1.Location = new Point(364, 84);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(108, 34);
+            label1.Size = new Size(125, 34);
             label1.TabIndex = 50;
-            label1.Text = "To Account";
+            label1.Text = "ទៅកាន់គណនី";
             // 
             // txtfacc
             // 
@@ -122,35 +109,23 @@
             label2.Location = new Point(9, 86);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(131, 34);
+            label2.Size = new Size(80, 34);
             label2.TabIndex = 48;
-            label2.Text = "From Account";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Kh Battambang", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(37, 6);
-            label3.Margin = new Padding(4, 0, 4, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(132, 58);
-            label3.TabIndex = 56;
-            label3.Text = "Tranfer";
-            label3.Click += label3_Click;
+            label2.Text = "ពីគណនី";
             // 
             // button2
             // 
             button2.BackColor = Color.FromArgb(128, 128, 255);
             button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
             button2.BackgroundImageLayout = ImageLayout.None;
-            button2.Font = new Font("Times New Roman", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button2.Font = new Font("Kh Battambang", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button2.ImageAlign = ContentAlignment.MiddleLeft;
-            button2.Location = new Point(10, 272);
+            button2.Location = new Point(9, 270);
             button2.Margin = new Padding(4, 7, 4, 7);
             button2.Name = "button2";
-            button2.Size = new Size(176, 61);
+            button2.Size = new Size(155, 61);
             button2.TabIndex = 57;
-            button2.Text = "Transfer";
+            button2.Text = "ផ្ងើរប្រាក់";
             button2.TextAlign = ContentAlignment.MiddleRight;
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
@@ -158,15 +133,15 @@
             // button5
             // 
             button5.BackColor = Color.AliceBlue;
-            button5.Font = new Font("Times New Roman", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button5.Font = new Font("Kh Battambang", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button5.Image = Properties.Resources.close2;
             button5.ImageAlign = ContentAlignment.MiddleLeft;
-            button5.Location = new Point(194, 272);
+            button5.Location = new Point(13, 505);
             button5.Margin = new Padding(4, 7, 4, 7);
             button5.Name = "button5";
-            button5.Size = new Size(134, 61);
+            button5.Size = new Size(151, 61);
             button5.TabIndex = 59;
-            button5.Text = "Exit";
+            button5.Text = "ចាកចេញ";
             button5.TextAlign = ContentAlignment.MiddleRight;
             button5.UseVisualStyleBackColor = false;
             button5.Click += button5_Click;
@@ -175,23 +150,36 @@
             // 
             pictureBox1.BackColor = SystemColors.Control;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(416, 270);
+            pictureBox1.Location = new Point(364, 264);
             pictureBox1.Margin = new Padding(4, 7, 4, 7);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(295, 302);
+            pictureBox1.Size = new Size(301, 302);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 60;
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
             // 
-            // panel1
+            // label3
             // 
-            panel1.BackColor = Color.FromArgb(128, 128, 255);
-            panel1.Controls.Add(label3);
-            panel1.Location = new Point(12, 12);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(200, 64);
-            panel1.TabIndex = 63;
+            label3.AutoSize = true;
+            label3.Font = new Font("Kh Muol", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(275, 9);
+            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(169, 58);
+            label3.TabIndex = 61;
+            label3.Text = "ផ្ងើរប្រាក់";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Kh Battambang", 14.25F);
+            label4.Location = new Point(13, 177);
+            label4.Margin = new Padding(4, 0, 4, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(86, 34);
+            label4.TabIndex = 62;
+            label4.Text = "ថ្ងៃ-ខែ-ឆ្នាំ";
             // 
             // Transfer
             // 
@@ -199,11 +187,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
             ClientSize = new Size(722, 582);
-            Controls.Add(panel1);
+            Controls.Add(label4);
+            Controls.Add(label3);
             Controls.Add(pictureBox1);
             Controls.Add(button5);
             Controls.Add(button2);
-            Controls.Add(label5);
             Controls.Add(dateTimePicker1);
             Controls.Add(txtamount);
             Controls.Add(label6);
@@ -218,15 +206,11 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Transfer";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Label label5;
         private DateTimePicker dateTimePicker1;
         private TextBox txtamount;
         private Label label6;
@@ -234,10 +218,10 @@
         private Label label1;
         private TextBox txtfacc;
         private Label label2;
-        private Label label3;
         private Button button2;
         private Button button5;
         private PictureBox pictureBox1;
-        private Panel panel1;
+        private Label label3;
+        private Label label4;
     }
 }

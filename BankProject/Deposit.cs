@@ -25,7 +25,7 @@ namespace BankProject
             form.ShowDialog();
             this.Close();
         }
-        public void clear() 
+        public void clear()
         {
             txtaccno.Text = "";
             txtamount.Text = "";
@@ -56,14 +56,20 @@ namespace BankProject
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show(ex.Message);
             }
             finally
             {
                 con.Close();
             }
         }
-
+        public void ShowDepositReport(string accno, string date, decimal currentBalance, decimal deposit)
+        {
+            this.Hide();
+            DepositReport reportForm = new DepositReport(accno, date, currentBalance, deposit);
+            reportForm.ShowDialog();
+            this.Close();
+        }
         private void btns_Click(object sender, EventArgs e)
         {
             string accno, date;
@@ -102,7 +108,11 @@ namespace BankProject
                 cmd.ExecuteNonQuery();
 
                 transation.Commit();
-                MessageBox.Show("Transaction Success.....");
+                decimal decimalCurrentBalance = Convert.ToDecimal(currentBalance);
+                decimal decimalDeposit = Convert.ToDecimal(deposit);
+                ShowDepositReport(accno, date, decimalCurrentBalance + decimalDeposit, decimalDeposit);
+
+                //MessageBox.Show("Transaction Success.....");
                 clear();
 
             }
@@ -124,6 +134,11 @@ namespace BankProject
         }
 
         private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtamount_TextChanged(object sender, EventArgs e)
         {
 
         }

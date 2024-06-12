@@ -21,9 +21,10 @@ namespace BankProject
         private void Form3_Load(object sender, EventArgs e)
         {
             string username = Session.Username;
-            label8.Text = username;
-            label9.Text = DateTime.Now.ToLongTimeString();
-            label10.Text = DateTime.Now.ToString("dd-MM-yyyy");
+            //label8.Text = username;
+            //label9.Text = DateTime.Now.ToLongTimeString();
+            label11.Text = username;
+            //label10.Text = DateTime.Now.ToString("dd-MM-yyyy");
         }
         private void label1_Click(object sender, EventArgs e)
         {
@@ -100,7 +101,7 @@ namespace BankProject
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            label9.Text = DateTime.Now.ToLongTimeString();
+            //label9.Text = DateTime.Now.ToLongTimeString();
             timer1.Start();
         }
     }

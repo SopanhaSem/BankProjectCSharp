@@ -85,9 +85,9 @@
             label2.Location = new Point(10, 15);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(105, 34);
+            label2.Size = new Size(67, 34);
             label2.TabIndex = 2;
-            label2.Text = "First Name";
+            label2.Text = "ត្រកូល";
             label2.Click += label2_Click;
             // 
             // txtfname
@@ -117,9 +117,9 @@
             label4.Location = new Point(397, 263);
             label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
-            label4.Size = new Size(61, 34);
+            label4.Size = new Size(67, 34);
             label4.TabIndex = 13;
-            label4.Text = "Email";
+            label4.Text = "អ៊ីម៉ែល";
             // 
             // tabControl1
             // 
@@ -156,7 +156,7 @@
             tabPage1.Padding = new Padding(4, 7, 4, 7);
             tabPage1.Size = new Size(775, 425);
             tabPage1.TabIndex = 0;
-            tabPage1.Text = "Customer";
+            tabPage1.Text = "អតិថិជន";
             tabPage1.UseVisualStyleBackColor = true;
             // 
             // label9
@@ -166,9 +166,9 @@
             label9.Location = new Point(10, 263);
             label9.Margin = new Padding(4, 0, 4, 0);
             label9.Name = "label9";
-            label9.Size = new Size(52, 34);
+            label9.Size = new Size(145, 34);
             label9.TabIndex = 25;
-            label9.Text = "Date";
+            label9.Text = "ថ្ងៃ-ខែ-ឆ្នាំ​កំណើត";
             // 
             // dateTimePicker1
             // 
@@ -195,9 +195,9 @@
             label8.Location = new Point(400, 97);
             label8.Margin = new Padding(4, 0, 4, 0);
             label8.Name = "label8";
-            label8.Size = new Size(45, 34);
+            label8.Size = new Size(61, 34);
             label8.TabIndex = 22;
-            label8.Text = "City";
+            label8.Text = "ទីក្រុង";
             // 
             // txtphone
             // 
@@ -215,9 +215,9 @@
             label7.Location = new Point(400, 178);
             label7.Margin = new Padding(4, 0, 4, 0);
             label7.Name = "label7";
-            label7.Size = new Size(69, 34);
+            label7.Size = new Size(106, 34);
             label7.TabIndex = 20;
-            label7.Text = "Phone";
+            label7.Text = "លេខទូរស័ព្ទ";
             // 
             // txtstate
             // 
@@ -235,9 +235,9 @@
             label6.Location = new Point(13, 178);
             label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
-            label6.Size = new Size(56, 34);
+            label6.Size = new Size(35, 34);
             label6.TabIndex = 18;
-            label6.Text = "State";
+            label6.Text = "រដ្ជ";
             // 
             // txtstreet
             // 
@@ -255,9 +255,9 @@
             label5.Location = new Point(13, 97);
             label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
-            label5.Size = new Size(62, 34);
+            label5.Size = new Size(35, 34);
             label5.TabIndex = 16;
-            label5.Text = "Street";
+            label5.Text = "វិថី";
             // 
             // txtlname
             // 
@@ -275,9 +275,9 @@
             label1.Location = new Point(397, 15);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(104, 34);
+            label1.Size = new Size(63, 34);
             label1.TabIndex = 14;
-            label1.Text = "Last Name";
+            label1.Text = "ឈ្មោះ";
             // 
             // tabPage2
             // 
@@ -295,7 +295,7 @@
             tabPage2.Padding = new Padding(4, 7, 4, 7);
             tabPage2.Size = new Size(775, 425);
             tabPage2.TabIndex = 1;
-            tabPage2.Text = "Account";
+            tabPage2.Text = "គណនី";
             tabPage2.UseVisualStyleBackColor = true;
             // 
             // cbacctype
@@ -316,9 +316,9 @@
             label13.Location = new Point(396, 6);
             label13.Margin = new Padding(4, 0, 4, 0);
             label13.Name = "label13";
-            label13.Size = new Size(127, 34);
+            label13.Size = new Size(120, 34);
             label13.TabIndex = 10;
-            label13.Text = "Account Type";
+            label13.Text = "ប្រភេទគណនី";
             // 
             // txtdes
             // 
@@ -336,9 +336,9 @@
             label12.Location = new Point(11, 88);
             label12.Margin = new Padding(4, 0, 4, 0);
             label12.Name = "label12";
-            label12.Size = new Size(107, 34);
+            label12.Size = new Size(138, 34);
             label12.TabIndex = 8;
-            label12.Text = "Description";
+            label12.Text = "ពិព័ណនាគណនី";
             // 
             // txtbalance
             // 
@@ -356,9 +356,9 @@
             label11.Location = new Point(395, 88);
             label11.Margin = new Padding(4, 0, 4, 0);
             label11.Name = "label11";
-            label11.Size = new Size(82, 34);
+            label11.Size = new Size(170, 34);
             label11.TabIndex = 6;
-            label11.Text = "Balance";
+            label11.Text = "ចំនួនទឹកប្រាក់បញ្ចូល";
             // 
             // txtaccno
             // 
@@ -376,9 +376,9 @@
             label10.Location = new Point(11, 6);
             label10.Margin = new Padding(4, 0, 4, 0);
             label10.Name = "label10";
-            label10.Size = new Size(111, 34);
+            label10.Size = new Size(106, 34);
             label10.TabIndex = 4;
-            label10.Text = "Account No";
+            label10.Text = "លេខគណនី";
             // 
             // button2
             // 
@@ -387,9 +387,9 @@
             button2.Location = new Point(50, 388);
             button2.Margin = new Padding(4, 7, 4, 7);
             button2.Name = "button2";
-            button2.Size = new Size(127, 56);
+            button2.Size = new Size(140, 56);
             button2.TabIndex = 15;
-            button2.Text = "Save";
+            button2.Text = "រក្សាទុក";
             button2.TextAlign = ContentAlignment.MiddleRight;
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click_1;
@@ -401,9 +401,9 @@
             button3.Location = new Point(50, 449);
             button3.Margin = new Padding(4, 7, 4, 7);
             button3.Name = "button3";
-            button3.Size = new Size(127, 59);
+            button3.Size = new Size(140, 59);
             button3.TabIndex = 16;
-            button3.Text = "Exit";
+            button3.Text = "ចាកចេញ";
             button3.TextAlign = ContentAlignment.MiddleRight;
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
@@ -412,12 +412,12 @@
             // 
             button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
             button1.BackgroundImageLayout = ImageLayout.None;
-            button1.Location = new Point(185, 388);
+            button1.Location = new Point(197, 387);
             button1.Margin = new Padding(4, 7, 4, 7);
             button1.Name = "button1";
             button1.Size = new Size(127, 59);
             button1.TabIndex = 17;
-            button1.Text = "Clear";
+            button1.Text = "សម្អាត";
             button1.TextAlign = ContentAlignment.MiddleRight;
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click_1;
