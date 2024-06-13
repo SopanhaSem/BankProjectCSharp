@@ -73,9 +73,15 @@ namespace BankProject
 
                 MySqlDataReader reader = cmd.ExecuteReader();
 
-                while (reader.Read())
+                if (reader.Read())
                 {
                     txtbalance.Text = reader[4].ToString();
+                }
+                else
+                {
+                    NoAccountValCus noAccountValCus = new NoAccountValCus();
+                    noAccountValCus.ShowDialog();
+                    clear();
                 }
 
             }
@@ -94,52 +100,79 @@ namespace BankProject
             string accno, date;
             double bal, withdraw;
 
-
-            accno = txtusername.Text;
+            accno = txtusername.Text.Trim();
             date = dateTimePicker1.Text;
-            bal = Convert.ToDouble(txtbalance.Text);
-            withdraw = Convert.ToDouble(txtwithdraw.Text);
 
-            con.Open();
-            MySqlCommand cmd = new MySqlCommand();
-            MySqlTransaction transation;
+            if (string.IsNullOrEmpty(accno) || string.IsNullOrEmpty(txtbalance.Text) || string.IsNullOrEmpty(txtwithdraw.Text))
+            {
+                EmptyTextInput emptyTextInput = new EmptyTextInput();
+                emptyTextInput.ShowDialog();
+                return;
+            }
 
-            transation = con.BeginTransaction();
+            if (!double.TryParse(txtbalance.Text, out bal) || !double.TryParse(txtwithdraw.Text, out withdraw))
+            {
+                NoAccountValCus noAccountValCus = new NoAccountValCus();
+                noAccountValCus.ShowDialog();
+                return;
+            }
 
-            cmd.Connection = con;
-            cmd.Transaction = transation;
+            if (withdraw <= 0)
+            {
+                MoneyValidation moneyValidation = new MoneyValidation();
+                moneyValidation.ShowDialog();
+                return;
+            }
+
+            if (withdraw > bal)
+            {
+                NoMoneyVal noMoneyVal = new NoMoneyVal();
+                noMoneyVal.ShowDialog();
+                return;
+            }
 
             try
             {
-                cmd.CommandText = "SELECT balance FROM account WHERE accid = @accno";
-                cmd.Parameters.AddWithValue("@accno", accno);
-                double currentBalance = Convert.ToDouble(cmd.ExecuteScalar());
+                con.Open();
+                MySqlCommand cmd = new MySqlCommand();
+                MySqlTransaction transaction;
 
-                // Update account balance
-                cmd.CommandText = "UPDATE account SET balance = balance - @withdraw WHERE accid = @accno";
-                cmd.Parameters.AddWithValue("@withdraw", withdraw);
-                cmd.ExecuteNonQuery();
+                transaction = con.BeginTransaction();
+                cmd.Connection = con;
+                cmd.Transaction = transaction;
 
-                // Insert transaction record
-                cmd.CommandText = "INSERT INTO transaction(accid, date, bal, deposit, withdraw) VALUES (@accno, @date, @currentBalance, 0, @withdraw)";
-                cmd.Parameters.AddWithValue("@date", date);
-                cmd.Parameters.AddWithValue("@currentBalance", currentBalance);
-                cmd.ExecuteNonQuery();
+                try
+                {
+                    cmd.CommandText = "SELECT balance FROM account WHERE accid = @accno";
+                    cmd.Parameters.AddWithValue("@accno", accno);
+                    double currentBalance = Convert.ToDouble(cmd.ExecuteScalar());
 
-                transation.Commit();
-                decimal decimalCurrentBalance = Convert.ToDecimal(currentBalance);
-                decimal decimalWithdraw = Convert.ToDecimal(withdraw);
-                ShowWithdrawReport(accno, date, decimalCurrentBalance - decimalWithdraw, decimalWithdraw);
+                    cmd.CommandText = "UPDATE account SET balance = balance - @withdraw WHERE accid = @accno";
+                    cmd.Parameters.AddWithValue("@withdraw", withdraw);
+                    cmd.ExecuteNonQuery();
 
-                //MessageBox.Show("Transaction Success.....");
-                clear();
+                    cmd.CommandText = "INSERT INTO transaction(accid, date, bal, deposit, withdraw) VALUES (@accno, @date, @currentBalance, 0, @withdraw)";
+                    cmd.Parameters.AddWithValue("@date", date);
+                    cmd.Parameters.AddWithValue("@currentBalance", currentBalance);
+                    cmd.ExecuteNonQuery();
 
+                    transaction.Commit();
+                    decimal decimalCurrentBalance = Convert.ToDecimal(currentBalance);
+                    decimal decimalWithdraw = Convert.ToDecimal(withdraw);
+                    ShowWithdrawReport(accno, date, decimalCurrentBalance - decimalWithdraw, decimalWithdraw);
+
+                    clear();
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    MessageBox.Show(ex.ToString(), "Transaction Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    clear();
+                }
             }
             catch (Exception ex)
             {
-                transation.Rollback();
-                MessageBox.Show(ex.ToString());
-                clear();
+                MessageBox.Show(ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {

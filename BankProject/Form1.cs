@@ -129,7 +129,8 @@ namespace BankProject
             string.IsNullOrWhiteSpace(acno) || string.IsNullOrWhiteSpace(actype) ||
             string.IsNullOrWhiteSpace(des) || string.IsNullOrWhiteSpace(bal))
             {
-                MessageBox.Show("All fields are required.");
+                EmptyTextInput emptyTextInput = new EmptyTextInput();
+                emptyTextInput.ShowDialog();
                 return;
             }
             try

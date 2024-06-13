@@ -1,6 +1,6 @@
 ﻿namespace BankProject
 {
-    partial class ProgressBar
+    partial class MoneyValidation
     {
         /// <summary>
         /// Required designer variable.
@@ -28,55 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            progressBar1 = new System.Windows.Forms.ProgressBar();
-            timer1 = new System.Windows.Forms.Timer(components);
+            panel1 = new Panel();
             label1 = new Label();
             SuspendLayout();
             // 
-            // progressBar1
+            // panel1
             // 
-            progressBar1.Location = new Point(40, 177);
-            progressBar1.Name = "progressBar1";
-            progressBar1.Size = new Size(501, 66);
-            progressBar1.TabIndex = 0;
-            // 
-            // timer1
-            // 
-            timer1.Enabled = true;
-            timer1.Interval = 50;
-            timer1.Tick += timer1_Tick;
+            panel1.BackgroundImage = Properties.Resources.exit2;
+            panel1.BackgroundImageLayout = ImageLayout.None;
+            panel1.Location = new Point(38, 59);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(54, 52);
+            panel1.TabIndex = 3;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(238, 246);
+            label1.Font = new Font("Moul", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ImageAlign = ContentAlignment.MiddleLeft;
+            label1.Location = new Point(98, 66);
             label1.Name = "label1";
-            label1.Size = new Size(114, 38);
-            label1.TabIndex = 1;
-            label1.Text = "សូមរងចាំ...";
+            label1.Size = new Size(218, 38);
+            label1.TabIndex = 2;
+            label1.Text = "សូមបញ្ចូលទឹកប្រាក់";
+            label1.TextAlign = ContentAlignment.MiddleRight;
             // 
-            // ProgressBar
+            // MoneyValidation
             // 
-            AutoScaleDimensions = new SizeF(12F, 38F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(580, 455);
+            ClientSize = new Size(345, 170);
+            Controls.Add(panel1);
             Controls.Add(label1);
-            Controls.Add(progressBar1);
-            Font = new Font("Kh Battambang", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(5, 8, 5, 8);
-            Name = "ProgressBar";
+            FormBorderStyle = FormBorderStyle.SizableToolWindow;
+            Name = "MoneyValidation";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "ProgressBar";
+            Text = "MoneyValidation";
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.Timer timer1;
+        private Panel panel1;
         private Label label1;
     }
 }

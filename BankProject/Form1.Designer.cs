@@ -125,6 +125,7 @@
             // 
             tabControl1.Controls.Add(tabPage1);
             tabControl1.Controls.Add(tabPage2);
+            tabControl1.Font = new Font("Moul", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             tabControl1.Location = new Point(340, 27);
             tabControl1.Margin = new Padding(4, 7, 4, 7);
             tabControl1.Name = "tabControl1";
@@ -396,15 +397,14 @@
             // 
             // button3
             // 
-            button3.BackgroundImage = (Image)resources.GetObject("button3.BackgroundImage");
             button3.BackgroundImageLayout = ImageLayout.None;
+            button3.ImageAlign = ContentAlignment.TopCenter;
             button3.Location = new Point(50, 449);
             button3.Margin = new Padding(4, 7, 4, 7);
             button3.Name = "button3";
             button3.Size = new Size(140, 59);
             button3.TabIndex = 16;
             button3.Text = "ចាកចេញ";
-            button3.TextAlign = ContentAlignment.MiddleRight;
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 

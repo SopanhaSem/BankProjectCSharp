@@ -236,12 +236,12 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Font = new Font("Kh Battambang", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label11.Font = new Font("Moul", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label11.Location = new Point(195, 624);
             label11.Name = "label11";
-            label11.Size = new Size(104, 49);
+            label11.Size = new Size(185, 49);
             label11.TabIndex = 24;
-            label11.Text = "label11";
+            label11.Text = "username";
             // 
             // Form3
             // 

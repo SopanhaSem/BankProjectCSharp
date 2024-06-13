@@ -155,6 +155,7 @@
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(12, 344);
             dataGridView1.Margin = new Padding(4, 6, 4, 6);
@@ -294,6 +295,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 34F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
             ClientSize = new Size(1034, 782);
             Controls.Add(label6);
             Controls.Add(label3);

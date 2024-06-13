@@ -42,21 +42,27 @@ namespace BankProject
             {
                 con.Open();
 
-                string st = "select * from account where accid = '" + txtaccno.Text + "'";
+                string st = "SELECT * FROM account WHERE accid = @accno";
                 MySqlCommand cmd = new MySqlCommand(st, con);
-
+                cmd.Parameters.AddWithValue("@accno", txtaccno.Text);
 
                 MySqlDataReader reader = cmd.ExecuteReader();
 
-                while (reader.Read())
+                if (reader.Read())
                 {
-                    txtamount.Text = reader[4].ToString();
+                    txtamount.Text = reader["balance"].ToString();
+                }
+                else
+                {
+                    NoAccountValCus noAccountValCus = new NoAccountValCus();
+                    noAccountValCus.ShowDialog();
+                    clear();
                 }
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -72,53 +78,69 @@ namespace BankProject
         }
         private void btns_Click(object sender, EventArgs e)
         {
-            string accno, date;
-            double bal, deposit;
+            string accno = txtaccno.Text;
+            string date = dateTimePicker1.Text;
+            double deposit;
 
+            if (string.IsNullOrWhiteSpace(accno) || !double.TryParse(txtdeposit.Text, out deposit))
+            {
+              EmptyTextInput emptyTextInput = new EmptyTextInput();
+                emptyTextInput.ShowDialog();
+                return;
+            }
 
-            accno = txtaccno.Text;
-            date = dateTimePicker1.Text;
-            bal = Convert.ToDouble(txtamount.Text);
-            deposit = Convert.ToDouble(txtdeposit.Text);
-
-            con.Open();
-            MySqlCommand cmd = new MySqlCommand();
-            MySqlTransaction transation;
-
-            transation = con.BeginTransaction();
-
-            cmd.Connection = con;
-            cmd.Transaction = transation;
+            if (deposit < 0)
+            {
+                MoneyValidation moneyValidation = new MoneyValidation();
+                moneyValidation.ShowDialog();
+                return;
+            }
 
             try
             {
-                cmd.CommandText = "SELECT balance FROM account WHERE accid = @accno";
+                con.Open();
+                MySqlCommand cmd = new MySqlCommand("SELECT balance FROM account WHERE accid = @accno", con);
                 cmd.Parameters.AddWithValue("@accno", accno);
-                double currentBalance = Convert.ToDouble(cmd.ExecuteScalar());
 
-                // Update account balance
-                cmd.CommandText = "UPDATE account SET balance = balance + @deposit WHERE accid = @accno";
-                cmd.Parameters.AddWithValue("@deposit", deposit);
-                cmd.ExecuteNonQuery();
+                object result = cmd.ExecuteScalar();
+                if (result == null)
+                {
+                    //MessageBox.Show("User not found");
+                    clear();
+                    return;
+                }
 
-                // Insert transaction record
-                cmd.CommandText = "INSERT INTO transaction(accid, date, bal, deposit, withdraw) VALUES (@accno, @date, @currentBalance, @deposit, 0)";
-                cmd.Parameters.AddWithValue("@date", date);
-                cmd.Parameters.AddWithValue("@currentBalance", currentBalance);
-                cmd.ExecuteNonQuery();
+                double currentBalance = Convert.ToDouble(result);
 
-                transation.Commit();
-                decimal decimalCurrentBalance = Convert.ToDecimal(currentBalance);
-                decimal decimalDeposit = Convert.ToDecimal(deposit);
-                ShowDepositReport(accno, date, decimalCurrentBalance + decimalDeposit, decimalDeposit);
-                clear();
+                MySqlTransaction transaction = con.BeginTransaction();
+                cmd.Transaction = transaction;
 
+                try
+                {
+
+                    cmd.CommandText = "UPDATE account SET balance = balance + @deposit WHERE accid = @accno";
+                    cmd.Parameters.AddWithValue("@deposit", deposit);
+                    cmd.ExecuteNonQuery();
+
+                    cmd.CommandText = "INSERT INTO transaction(accid, date, bal, deposit, withdraw) VALUES (@accno, @date, @currentBalance, @deposit, 0)";
+                    cmd.Parameters.AddWithValue("@date", date);
+                    cmd.Parameters.AddWithValue("@currentBalance", currentBalance);
+                    cmd.ExecuteNonQuery();
+
+                    transaction.Commit();
+
+                    ShowDepositReport(accno, date, (decimal)(currentBalance + deposit), (decimal)deposit);
+                    clear();
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    MessageBox.Show(ex.ToString());
+                }
             }
             catch (Exception ex)
             {
-                transation.Rollback();
-                MessageBox.Show(ex.ToString());
-                clear();
+                MessageBox.Show(ex.Message);
             }
             finally
             {

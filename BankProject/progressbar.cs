@@ -19,7 +19,7 @@ namespace BankProject
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (progressBar1.Value < 25) // Check if the value is less than 100
+            if (progressBar1.Value < 47) // Check if the value is less than 100
             {
                 progressBar1.Value += 1;
             }

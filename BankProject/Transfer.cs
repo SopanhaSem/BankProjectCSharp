@@ -42,53 +42,96 @@ namespace BankProject
             string fno, tono, date;
             double amount;
 
-            fno = txtfacc.Text;
-            tono = txttacc.Text;
+            fno = txtfacc.Text.Trim();
+            tono = txttacc.Text.Trim();
             date = dateTimePicker1.Text;
-            amount = Convert.ToDouble(txtamount.Text);
 
-            con.Open();
-            MySqlCommand cmd = new MySqlCommand();
-            MySqlTransaction transaction;
+            if (string.IsNullOrEmpty(fno) || string.IsNullOrEmpty(tono) || string.IsNullOrEmpty(txtamount.Text))
+            {
+                EmptyTextInput emptyTextInput = new EmptyTextInput();
+                emptyTextInput.ShowDialog();
+                return;
+            }
 
-            transaction = con.BeginTransaction();
-
-            cmd.Connection = con;
-            cmd.Transaction = transaction;
+            if (!double.TryParse(txtamount.Text, out amount) || amount <= 0)
+            {
+                MoneyValidation moneyValidation = new MoneyValidation();
+                moneyValidation.ShowDialog();
+                return;
+            }
 
             try
             {
-                // Deduct amount from the sender's account
-                cmd.CommandText = "UPDATE account SET balance = balance - @amount WHERE accid = @fno";
-                cmd.Parameters.AddWithValue("@amount", amount);
-                cmd.Parameters.AddWithValue("@fno", fno);
-                cmd.ExecuteNonQuery();
+                con.Open();
 
-                // Add amount to the receiver's account
-                cmd.CommandText = "UPDATE account SET balance = balance + @amount WHERE accid = @tono";
-                cmd.Parameters.AddWithValue("@tono", tono);
-                cmd.ExecuteNonQuery();
+                MySqlCommand checkCmd = new MySqlCommand("SELECT COUNT(*) FROM account WHERE accid = @accid", con);
+                checkCmd.Parameters.AddWithValue("@accid", fno);
+                int fromAccountExists = Convert.ToInt32(checkCmd.ExecuteScalar());
 
-                // Insert transaction record for the transfer
-                cmd.Parameters.Clear(); // Clear previous parameters
-                cmd.CommandText = "INSERT INTO transfer(f_acc, to_acc, date, amount) VALUES (@fno, @tono, @date, @amount)";
-                cmd.Parameters.AddWithValue("@fno", fno);
-                cmd.Parameters.AddWithValue("@tono", tono);
-                cmd.Parameters.AddWithValue("@date", date);
-                cmd.Parameters.AddWithValue("@amount", amount);
-                cmd.ExecuteNonQuery();
+                checkCmd.Parameters.Clear();
+                checkCmd.Parameters.AddWithValue("@accid", tono);
+                int toAccountExists = Convert.ToInt32(checkCmd.ExecuteScalar());
 
-                transaction.Commit();
-                //decimal decimalCurrentBalance = Convert.ToDecimal(fno);
-                decimal decimalWithdraw = Convert.ToDecimal(amount);
-                ShowTransferReport(date, fno, tono,decimalWithdraw);
+                if (fromAccountExists == 0 || toAccountExists == 0)
+                {
+                    NoAccountValCus noAccountValCus = new NoAccountValCus();
+                    noAccountValCus.ShowDialog();
+                    return;
+                }
 
-                //MessageBox.Show("Transfer Success.");
+                MySqlCommand balanceCmd = new MySqlCommand("SELECT balance FROM account WHERE accid = @fno", con);
+                balanceCmd.Parameters.AddWithValue("@fno", fno);
+                double fromAccountBalance = Convert.ToDouble(balanceCmd.ExecuteScalar());
+
+                if (fromAccountBalance < amount)
+                {
+                    NoMoneyVal noMoney = new NoMoneyVal();
+                    noMoney.ShowDialog();
+                    return;
+                }
+
+                MySqlCommand cmd = new MySqlCommand();
+                MySqlTransaction transaction;
+
+                transaction = con.BeginTransaction();
+
+                cmd.Connection = con;
+                cmd.Transaction = transaction;
+
+                try
+                {
+                    cmd.CommandText = "UPDATE account SET balance = balance - @amount WHERE accid = @fno";
+                    cmd.Parameters.AddWithValue("@amount", amount);
+                    cmd.Parameters.AddWithValue("@fno", fno);
+                    cmd.ExecuteNonQuery();
+
+                    cmd.Parameters.Clear();
+                    cmd.CommandText = "UPDATE account SET balance = balance + @amount WHERE accid = @tono";
+                    cmd.Parameters.AddWithValue("@amount", amount);
+                    cmd.Parameters.AddWithValue("@tono", tono);
+                    cmd.ExecuteNonQuery();
+
+                    cmd.Parameters.Clear();
+                    cmd.CommandText = "INSERT INTO transfer(f_acc, to_acc, date, amount) VALUES (@fno, @tono, @date, @amount)";
+                    cmd.Parameters.AddWithValue("@fno", fno);
+                    cmd.Parameters.AddWithValue("@tono", tono);
+                    cmd.Parameters.AddWithValue("@date", date);
+                    cmd.Parameters.AddWithValue("@amount", amount);
+                    cmd.ExecuteNonQuery();
+
+                    transaction.Commit();
+                    decimal decimalWithdraw = Convert.ToDecimal(amount);
+                    ShowTransferReport(date, fno, tono, decimalWithdraw);
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    MessageBox.Show(ex.Message, "Transaction Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception ex)
             {
-                transaction.Rollback();
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
