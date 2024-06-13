@@ -25,7 +25,13 @@ namespace BankProject
             form3.ShowDialog();
             this.Close();
         }
-
+        public void ShowTransferReport( string date, string fno,string tono, decimal transfer)
+        {
+            this.Hide();
+            TransferReport reportForm = new TransferReport( date,fno,tono,  transfer);
+            reportForm.ShowDialog();
+            this.Close();
+        }
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -73,7 +79,11 @@ namespace BankProject
                 cmd.ExecuteNonQuery();
 
                 transaction.Commit();
-                MessageBox.Show("Transfer Success.");
+                //decimal decimalCurrentBalance = Convert.ToDecimal(fno);
+                decimal decimalWithdraw = Convert.ToDecimal(amount);
+                ShowTransferReport(date, fno, tono,decimalWithdraw);
+
+                //MessageBox.Show("Transfer Success.");
             }
             catch (Exception ex)
             {

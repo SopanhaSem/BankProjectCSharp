@@ -46,7 +46,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Moul", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(156, 21);
+            label1.Location = new Point(164, 21);
             label1.Name = "label1";
             label1.Size = new Size(191, 58);
             label1.TabIndex = 0;
@@ -57,9 +57,9 @@
             label2.AutoSize = true;
             label2.Location = new Point(311, 4);
             label2.Name = "label2";
-            label2.Size = new Size(116, 38);
+            label2.Size = new Size(124, 38);
             label2.TabIndex = 1;
-            label2.Text = "ទឹកប្រាក់ដក";
+            label2.Text = "ទឹកប្រាក់ដាក់";
             // 
             // label3
             // 

@@ -83,7 +83,6 @@
             // 
             button5.BackColor = Color.AliceBlue;
             button5.Font = new Font("Kh Battambang", 15.75F);
-            button5.Image = Properties.Resources.close;
             button5.ImageAlign = ContentAlignment.MiddleLeft;
             button5.Location = new Point(17, 509);
             button5.Margin = new Padding(4, 7, 4, 7);
@@ -91,7 +90,6 @@
             button5.Size = new Size(151, 58);
             button5.TabIndex = 35;
             button5.Text = "ចាកចេញ";
-            button5.TextAlign = ContentAlignment.MiddleRight;
             button5.UseVisualStyleBackColor = false;
             button5.Click += button5_Click;
             // 
@@ -117,7 +115,6 @@
             // btns
             // 
             btns.BackColor = Color.FromArgb(128, 128, 255);
-            btns.BackgroundImage = (Image)resources.GetObject("btns.BackgroundImage");
             btns.BackgroundImageLayout = ImageLayout.None;
             btns.Font = new Font("Kh Battambang", 15.75F);
             btns.Location = new Point(164, 273);
@@ -126,7 +123,6 @@
             btns.Size = new Size(167, 54);
             btns.TabIndex = 44;
             btns.Text = "ដាក់ប្រាក់";
-            btns.TextAlign = ContentAlignment.MiddleRight;
             btns.UseVisualStyleBackColor = false;
             btns.Click += btns_Click;
             // 
@@ -146,7 +142,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Kh Muol", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(257, 9);
+            label3.Location = new Point(260, 9);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
             label3.Size = new Size(181, 58);

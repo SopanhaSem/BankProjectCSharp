@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TranInformation));
             btnup = new Button();
             btnedit = new Button();
             btndel = new Button();
@@ -57,7 +56,6 @@
             btnup.BackColor = Color.FromArgb(0, 192, 0);
             btnup.BackgroundImageLayout = ImageLayout.Zoom;
             btnup.Font = new Font("Kh Battambang", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnup.Image = (Image)resources.GetObject("btnup.Image");
             btnup.ImageAlign = ContentAlignment.MiddleLeft;
             btnup.Location = new Point(150, 260);
             btnup.Margin = new Padding(4, 6, 4, 6);
@@ -65,7 +63,6 @@
             btnup.Size = new Size(147, 58);
             btnup.TabIndex = 1;
             btnup.Text = "កែទិន្ន័យ";
-            btnup.TextAlign = ContentAlignment.MiddleRight;
             btnup.UseVisualStyleBackColor = false;
             btnup.Click += btnadd_Click;
             // 
@@ -74,7 +71,6 @@
             btnedit.BackColor = Color.FromArgb(192, 192, 255);
             btnedit.BackgroundImageLayout = ImageLayout.None;
             btnedit.Font = new Font("Kh Battambang", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnedit.Image = Properties.Resources.edit;
             btnedit.ImageAlign = ContentAlignment.MiddleLeft;
             btnedit.Location = new Point(305, 260);
             btnedit.Margin = new Padding(4, 6, 4, 6);
@@ -82,14 +78,12 @@
             btnedit.Size = new Size(145, 58);
             btnedit.TabIndex = 2;
             btnedit.Text = "ចាប់ទិន្ន័យ";
-            btnedit.TextAlign = ContentAlignment.MiddleRight;
             btnedit.UseVisualStyleBackColor = false;
             btnedit.Click += btnedit_Click;
             // 
             // btndel
             // 
             btndel.BackColor = Color.Red;
-            btndel.BackgroundImage = (Image)resources.GetObject("btndel.BackgroundImage");
             btndel.BackgroundImageLayout = ImageLayout.None;
             btndel.Font = new Font("Kh Battambang", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btndel.ImageAlign = ContentAlignment.MiddleLeft;
@@ -99,7 +93,6 @@
             btndel.Size = new Size(130, 58);
             btndel.TabIndex = 3;
             btndel.Text = "លុប";
-            btndel.TextAlign = ContentAlignment.MiddleRight;
             btndel.UseVisualStyleBackColor = false;
             btndel.Click += btndel_Click;
             // 
@@ -107,7 +100,6 @@
             // 
             button5.BackColor = Color.AliceBlue;
             button5.Font = new Font("Kh Battambang", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button5.Image = Properties.Resources.close3;
             button5.ImageAlign = ContentAlignment.MiddleLeft;
             button5.Location = new Point(867, 256);
             button5.Margin = new Padding(4, 6, 4, 6);
@@ -115,7 +107,6 @@
             button5.Size = new Size(148, 58);
             button5.TabIndex = 8;
             button5.Text = "ចាកចេញ";
-            button5.TextAlign = ContentAlignment.MiddleRight;
             button5.UseVisualStyleBackColor = false;
             button5.Click += button5_Click;
             // 
@@ -197,7 +188,7 @@
             // 
             comboBox1.Font = new Font("Kh Battambang", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Male", "Female" });
+            comboBox1.Items.AddRange(new object[] { "ប្រុស", "ស្រី" });
             comboBox1.Location = new Point(659, 119);
             comboBox1.Margin = new Padding(4, 6, 4, 6);
             comboBox1.Name = "comboBox1";
@@ -208,16 +199,15 @@
             // btnadd
             // 
             btnadd.BackColor = Color.FromArgb(128, 128, 255);
-            btnadd.BackgroundImage = (Image)resources.GetObject("btnadd.BackgroundImage");
             btnadd.BackgroundImageLayout = ImageLayout.None;
             btnadd.Font = new Font("Kh Battambang", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnadd.ImageAlign = ContentAlignment.BottomRight;
             btnadd.Location = new Point(12, 260);
             btnadd.Margin = new Padding(4, 6, 4, 6);
             btnadd.Name = "btnadd";
             btnadd.Size = new Size(130, 58);
             btnadd.TabIndex = 24;
             btnadd.Text = "រក្សាទុក";
-            btnadd.TextAlign = ContentAlignment.MiddleRight;
             btnadd.UseVisualStyleBackColor = false;
             btnadd.Click += btnadd_Click_1;
             // 

@@ -183,31 +183,27 @@
             // 
             // button3
             // 
-            button3.BackgroundImage = (Image)resources.GetObject("button3.BackgroundImage");
             button3.BackgroundImageLayout = ImageLayout.None;
             button3.Font = new Font("Kh Battambang", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button3.Location = new Point(711, 621);
+            button3.Location = new Point(776, 621);
             button3.Margin = new Padding(4, 7, 4, 7);
             button3.Name = "button3";
-            button3.Size = new Size(185, 59);
+            button3.Size = new Size(145, 59);
             button3.TabIndex = 17;
             button3.Text = "ចេញពីគណនី";
-            button3.TextAlign = ContentAlignment.MiddleRight;
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
             // button1
             // 
-            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
             button1.BackgroundImageLayout = ImageLayout.None;
             button1.Font = new Font("Kh Battambang", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(711, 559);
+            button1.Location = new Point(776, 559);
             button1.Margin = new Padding(4, 7, 4, 7);
             button1.Name = "button1";
-            button1.Size = new Size(185, 59);
+            button1.Size = new Size(145, 59);
             button1.TabIndex = 18;
             button1.Text = "ចាកចេញ";
-            button1.TextAlign = ContentAlignment.MiddleRight;
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 

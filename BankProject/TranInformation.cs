@@ -40,12 +40,12 @@ namespace BankProject
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
                 dataGridView1.DataSource = dt;
-                dataGridView1.Columns["stid"].HeaderText = "ID";
-                dataGridView1.Columns["stName"].HeaderText = "Name";
-                dataGridView1.Columns["gender"].HeaderText = "Gender";
-                dataGridView1.Columns["position"].HeaderText = "Position";
-                dataGridView1.Columns["phone"].HeaderText = "Phone";
-                dataGridView1.Columns["hiredate"].HeaderText = "Hired Date";
+                dataGridView1.Columns["stid"].HeaderText = "កូដ";
+                dataGridView1.Columns["stName"].HeaderText = "ឈ្មោះ";
+                dataGridView1.Columns["gender"].HeaderText = "ភេទ";
+                dataGridView1.Columns["position"].HeaderText = "ដំណែង";
+                dataGridView1.Columns["phone"].HeaderText = "លេខទូរស័ព្ទ";
+                dataGridView1.Columns["hiredate"].HeaderText = "ថ្ងៃចូលធ្វើការ";
             }
             catch (Exception ex)
             {

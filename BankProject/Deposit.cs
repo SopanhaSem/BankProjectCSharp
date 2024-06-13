@@ -111,8 +111,6 @@ namespace BankProject
                 decimal decimalCurrentBalance = Convert.ToDecimal(currentBalance);
                 decimal decimalDeposit = Convert.ToDecimal(deposit);
                 ShowDepositReport(accno, date, decimalCurrentBalance + decimalDeposit, decimalDeposit);
-
-                //MessageBox.Show("Transaction Success.....");
                 clear();
 
             }

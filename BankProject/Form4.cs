@@ -21,6 +21,13 @@ namespace BankProject
             InitializeComponent();
 
         }
+        public void ShowWithdrawReport(string accno, string date, decimal currentBalance, decimal withdraw)
+        {
+            this.Hide();
+            WithDrawReport reportForm = new WithDrawReport(accno, date, currentBalance, withdraw);
+            reportForm.ShowDialog();
+            this.Close();
+        }
         MySqlConnection con = new MySqlConnection("server = localhost; database = bankdb; username = root;password = ;");
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -120,7 +127,11 @@ namespace BankProject
                 cmd.ExecuteNonQuery();
 
                 transation.Commit();
-                MessageBox.Show("Transaction Success.....");
+                decimal decimalCurrentBalance = Convert.ToDecimal(currentBalance);
+                decimal decimalWithdraw = Convert.ToDecimal(withdraw);
+                ShowWithdrawReport(accno, date, decimalCurrentBalance - decimalWithdraw, decimalWithdraw);
+
+                //MessageBox.Show("Transaction Success.....");
                 clear();
 
             }

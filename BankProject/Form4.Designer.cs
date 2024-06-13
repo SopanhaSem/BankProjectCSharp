@@ -89,7 +89,6 @@
             // 
             button5.BackColor = Color.AliceBlue;
             button5.Font = new Font("Kh Battambang", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button5.Image = Properties.Resources.close1;
             button5.ImageAlign = ContentAlignment.MiddleLeft;
             button5.Location = new Point(20, 500);
             button5.Margin = new Padding(4, 7, 4, 7);
@@ -97,14 +96,12 @@
             button5.Size = new Size(154, 56);
             button5.TabIndex = 12;
             button5.Text = "ចាកចេញ";
-            button5.TextAlign = ContentAlignment.MiddleRight;
             button5.UseVisualStyleBackColor = false;
             button5.Click += button5_Click;
             // 
             // button1
             // 
             button1.BackColor = Color.FromArgb(128, 128, 255);
-            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
             button1.BackgroundImageLayout = ImageLayout.None;
             button1.Font = new Font("Kh Battambang", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button1.ImageAlign = ContentAlignment.MiddleLeft;
@@ -114,7 +111,6 @@
             button1.Size = new Size(164, 62);
             button1.TabIndex = 25;
             button1.Text = "ដកប្រាក់";
-            button1.TextAlign = ContentAlignment.MiddleRight;
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click_1;
             // 
