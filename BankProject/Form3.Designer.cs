@@ -69,7 +69,7 @@
             // 
             pictureBox2.BackColor = Color.FromArgb(255, 192, 255);
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(126, 104);
+            pictureBox2.Location = new Point(133, 115);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(173, 171);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
@@ -83,7 +83,7 @@
             pictureBox1.BackColor = Color.Red;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.InitialImage = (Image)resources.GetObject("pictureBox1.InitialImage");
-            pictureBox1.Location = new Point(377, 104);
+            pictureBox1.Location = new Point(384, 115);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(173, 171);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -96,7 +96,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Kh Battambang", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(152, 278);
+            label2.Location = new Point(159, 289);
             label2.Name = "label2";
             label2.Size = new Size(123, 49);
             label2.TabIndex = 6;
@@ -106,7 +106,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Kh Battambang", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(411, 278);
+            label3.Location = new Point(418, 289);
             label3.Name = "label3";
             label3.Size = new Size(113, 49);
             label3.TabIndex = 7;
@@ -116,7 +116,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Kh Battambang", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(386, 502);
+            label5.Location = new Point(393, 513);
             label5.Name = "label5";
             label5.Size = new Size(158, 49);
             label5.TabIndex = 10;
@@ -126,7 +126,7 @@
             // 
             pictureBox4.BackColor = Color.White;
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(377, 330);
+            pictureBox4.Location = new Point(384, 341);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(173, 171);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
@@ -139,7 +139,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Kh Battambang", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(159, 502);
+            label6.Location = new Point(166, 513);
             label6.Name = "label6";
             label6.Size = new Size(113, 49);
             label6.TabIndex = 12;
@@ -149,7 +149,7 @@
             // 
             pictureBox5.BackColor = Color.FromArgb(255, 224, 192);
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(126, 330);
+            pictureBox5.Location = new Point(133, 341);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(173, 171);
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
@@ -162,7 +162,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Kh Battambang", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.Location = new Point(608, 278);
+            label7.Location = new Point(615, 289);
             label7.Name = "label7";
             label7.Size = new Size(194, 49);
             label7.TabIndex = 14;
@@ -172,7 +172,7 @@
             // 
             pictureBox6.BackColor = Color.FromArgb(255, 224, 192);
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(614, 104);
+            pictureBox6.Location = new Point(621, 115);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(173, 171);
             pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
@@ -236,10 +236,10 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Font = new Font("Kh Battambang", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label11.Location = new Point(198, 631);
+            label11.Font = new Font("Kh Battambang", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label11.Location = new Point(195, 624);
             label11.Name = "label11";
-            label11.Size = new Size(80, 38);
+            label11.Size = new Size(104, 49);
             label11.TabIndex = 24;
             label11.Text = "label11";
             // 

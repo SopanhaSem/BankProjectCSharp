@@ -88,7 +88,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Kh Battambang", 15.75F);
-            label5.Location = new Point(44, 4);
+            label5.Location = new Point(35, 4);
             label5.Name = "label5";
             label5.Size = new Size(117, 38);
             label5.TabIndex = 4;
@@ -98,27 +98,27 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Kh Battambang", 15.75F);
-            label3.Location = new Point(188, 4);
+            label3.Location = new Point(338, 4);
             label3.Name = "label3";
-            label3.Size = new Size(88, 38);
+            label3.Size = new Size(131, 38);
             label3.TabIndex = 2;
-            label3.Text = "ទឹកប្រាក់";
+            label3.Text = "ទឹកប្រាក់សរុប";
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Kh Battambang", 15.75F);
-            label2.Location = new Point(311, 4);
+            label2.Location = new Point(182, 4);
             label2.Name = "label2";
-            label2.Size = new Size(124, 38);
+            label2.Size = new Size(116, 38);
             label2.TabIndex = 1;
-            label2.Text = "ទឹកប្រាក់ដាក់";
+            label2.Text = "ទឹកប្រាក់ដក";
             // 
             // lblAccNo
             // 
             lblAccNo.AutoSize = true;
             lblAccNo.Font = new Font("Kh Battambang", 15.75F);
-            lblAccNo.Location = new Point(48, 143);
+            lblAccNo.Location = new Point(39, 143);
             lblAccNo.Name = "lblAccNo";
             lblAccNo.Size = new Size(117, 38);
             lblAccNo.TabIndex = 16;
@@ -128,7 +128,7 @@
             // 
             lblbl.AutoSize = true;
             lblbl.Font = new Font("Kh Battambang", 15.75F);
-            lblbl.Location = new Point(189, 143);
+            lblbl.Location = new Point(361, 143);
             lblbl.Name = "lblbl";
             lblbl.Size = new Size(91, 38);
             lblbl.TabIndex = 15;
@@ -138,7 +138,7 @@
             // 
             lblDeposit.AutoSize = true;
             lblDeposit.Font = new Font("Kh Battambang", 15.75F);
-            lblDeposit.Location = new Point(315, 143);
+            lblDeposit.Location = new Point(186, 143);
             lblDeposit.Name = "lblDeposit";
             lblDeposit.Size = new Size(182, 38);
             lblDeposit.TabIndex = 14;
@@ -148,7 +148,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Moul", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(160, 5);
+            label1.Location = new Point(168, 9);
             label1.Name = "label1";
             label1.Size = new Size(191, 58);
             label1.TabIndex = 12;
